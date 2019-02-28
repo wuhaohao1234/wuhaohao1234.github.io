@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - "11.3.0"
+branches:
+  only:
+    - develop
+install:
+  - npm install -g yarn
+  - yarn
+script:
+  - yarn
+  - yarn build
+after_success:
+  - cd ./build
+  - git init
+  - git config --global user.name "${GIT_NAME}"
+  - git config --global user.email "${GIT_EMAIL}"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:master
+
+env:
+ global:
+   - GH_REF: github.com/wuhaohao1234/wuhaohao1234.github.io
