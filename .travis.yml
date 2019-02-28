@@ -6,7 +6,8 @@ node_js:
 branches:
   only:
     - dev
-
+env:
+  - EMBER_VERSION=default
 install:
   - npm install -g yarn
   - npm install -g codecov
@@ -15,3 +16,4 @@ script:
   - yarn
   - codecov
   - yarn build
+
