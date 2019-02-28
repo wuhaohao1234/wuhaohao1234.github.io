@@ -2,18 +2,15 @@ language: node_js
 
 node_js:
   - "11.3.0"
-
 branches:
   only:
     - dev
-env:
-  - EMBER_VERSION=default
 install:
   - npm install -g yarn
-  - npm install -g codecov
   - yarn
 script:
   - yarn
-  - codecov
   - yarn build
-
+env:
+ global:
+   - GH_REF: github.com/wuhaohao1234/wuhaohao1234.github.io
