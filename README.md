@@ -1,5 +1,5 @@
 # myblog
-
+![构建](https://travis-ci.org/wuhaohao1234/wuhaohao1234.github.io.svg?branch=develop)
 ## Project setup
 ```
 yarn install
