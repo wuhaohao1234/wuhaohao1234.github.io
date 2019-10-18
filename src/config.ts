@@ -1,5 +1,5 @@
 const Config = {
-    items : [
+    items: [
         {
             icon: 'folder',
             iconClass: 'grey lighten-1 white--text',
@@ -111,6 +111,27 @@ const Config = {
             title: 'webpack4搭建vue项目教程',
             subtitle: '学习webpack,vue,ts',
             src: 'https://wuhaohao1234.github.io/vueConfigTravis/#/'
+        },
+        {
+            icon: 'folder',
+            iconClass: 'grey lighten-1 white--text',
+            title: 'TypeScript深入研究',
+            subtitle: '学习typescript',
+            src: 'https://basarat.gitbooks.io/typescript/content/'
+        },
+        {
+            icon: 'folder',
+            iconClass: 'grey lighten-1 white--text',
+            title: '函数式编程',
+            subtitle: 'js函数式编程',
+            src: 'https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/'
+        },
+        {
+            icon: 'folder',
+            iconClass: 'grey lighten-1 white--text',
+            title: 'ts设计模式',
+            subtitle: '作者：吴昊',
+            src: 'https://github.com/wuhaohao1234/typescript_designpat_patterns'
         },
     ]
 }
