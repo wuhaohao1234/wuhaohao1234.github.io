@@ -14,7 +14,7 @@ theme = "LoveIt"
 [params]
   # LoveIt 主题版本
   version = "0.2.X"
-
+  defaultTheme = "dark"
 [menu]
   [[menu.main]]
     identifier = "posts"

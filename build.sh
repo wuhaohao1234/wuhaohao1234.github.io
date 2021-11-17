@@ -1,0 +1,2 @@
+hugo
+mv public docs
