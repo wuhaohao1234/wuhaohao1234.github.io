@@ -1,0 +1,25 @@
+name: Auto Deploy hugo
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.85.0'
+          extended: true
+      - name: Build 
+        run: hugo --minify
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.abu }} # secret 中设置好私钥
+          publish_branch: blog # Page 仓库的分支
+          publish_dir: ./public # 静态网页路径

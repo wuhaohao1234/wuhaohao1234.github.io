@@ -1,0 +1,99 @@
+baseURL = "http://wuhaohao1234.github.io"
+# [en, zh-cn, fr, ...] 设置默认的语言
+defaultContentLanguage = "zh-cn"
+# 网站语言, 仅在这里 CN 大写
+languageCode = "zh-CN"
+# 是否包括中日韩文字
+hasCJKLanguage = true
+# 网站标题
+title = "阿布的博客"
+
+# 更改使用 Hugo 构建网站时使用的默认主题
+theme = "LoveIt"
+
+[params]
+  # LoveIt 主题版本
+  version = "0.2.X"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+    pre = ""
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    post = ""
+    name = "所有文章"
+    url = "/posts/"
+    # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "标签"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "分类"
+    url = "/categories/"
+    title = ""
+    weight = 3
+  [[menu.main]]
+    identifier = "yuque"
+    pre=""
+    post = ""
+    name = "语雀"
+    url = "https://www.yuque.com/abu0418"
+    title = ""
+    weight = 4
+  [[menu.main]]
+    identifier = "github"
+    pre = ""
+    post = ""
+    name = "github"
+    url = "https://github.com/wuhaohao1234"
+    title = ""
+    weight = 5
+# 主页信息设置
+[languages.zh-cn.params.home]
+  # RSS 文章数目
+  rss = 10
+  # 主页个人信息
+  [languages.zh-cn.params.home.profile]
+    enable = true
+    # Gravatar 邮箱，用于优先在主页显示的头像
+    gravatarEmail = ""
+    # 主页显示头像的 URL
+    avatarURL = "https://z3.ax1x.com/2021/11/17/I4aHld.png"
+    # 主页显示的网站标题
+    title = "阿布0418"
+    # 主页显示的网站副标题
+    subtitle = "热爱读书，开源，一边分享知识，一边提升自己"
+    # 是否为副标题显示打字机动画
+    typeit = true
+    # 是否显示社交账号
+    social = true
+    # 免责声明 (支持 HTML 格式)
+    disclaimer = "所有文章观点仅代表本站观点，与他人无关。"
+  # 主页文章列表
+  [languages.zh-cn.params.home.posts]
+    enable = true
+    # 主页每页显示文章数量
+    paginate = 20
+  # 主页的社交信息设置
+  [languages.zh-cn.params.social]
+    GitHub = "wuhaohao1234"
+    Bilibili = "295658400"
+    Email = "1611499758@qq.com"
+    Zhihu="wu-hao-hao-69"
+# Hugo 解析文档的配置
+[markup]
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
