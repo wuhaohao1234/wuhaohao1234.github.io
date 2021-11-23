@@ -1,2 +1,0 @@
-hugo
-mv public docs
