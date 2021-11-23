@@ -36,11 +36,11 @@ theme = "LoveIt"
     title = ""
     weight = 2
   [[menu.main]]
-    identifier = "categories"
+    identifier = "about"
     pre = ""
     post = ""
-    name = "分类"
-    url = "/categories/"
+    name = "关于"
+    url = "/about/"
     title = ""
     weight = 3
   [[menu.main]]
