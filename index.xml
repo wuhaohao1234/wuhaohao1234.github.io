@@ -3,9 +3,16 @@
         <title>阿布的博客</title>
         <link>http://wuhaohao1234.github.io/</link>
         <description>阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 01 Dec 2021 23:09:47 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 02 Dec 2021 02:31:33 &#43;0800</lastBuildDate>
             <atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>前端面试</title>
+    <link>http://wuhaohao1234.github.io/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</link>
+    <pubDate>Thu, 02 Dec 2021 02:31:33 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</guid>
+    <description><![CDATA[前端面试 https://juejin.cn/post/6871956933775982606#heading-65 https://juejin.cn/post/6844904166742048782#heading-4 https://juejin.cn/post/6844904160719011848#heading-21 https://github.com/wuhaohao1234/coder-docs/blob/main/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99.md https://juejin.cn/post/6844904093492707336 链接说明 内部链接 https://www.yuque.com/abu0418/kb/crk4dm 旧博文 必备技巧 输入url 发生 xxx 知识体系js 知识体系vue 常用 闭包 一个function里面return了一]]></description>
+</item><item>
     <title>qa与rd为什么不能一起合作</title>
     <link>http://wuhaohao1234.github.io/posts/qa%E4%B8%8Erd%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E4%B8%80%E8%B5%B7%E5%90%88%E4%BD%9C/</link>
     <pubDate>Wed, 01 Dec 2021 23:09:47 &#43;0800</pubDate>
