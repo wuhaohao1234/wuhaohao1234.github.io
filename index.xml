@@ -6,7 +6,16 @@
     <description>Recent content on 阿布的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 15 Jan 2022 04:30:59 +0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jan 2022 05:29:54 +0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter</title>
+      <link>http://wuhaohao1234.github.io/posts/flutter/</link>
+      <pubDate>Tue, 18 Jan 2022 05:29:54 +0800</pubDate>
+      
+      <guid>http://wuhaohao1234.github.io/posts/flutter/</guid>
+      <description>flutter 官网 https://docs.flutter.dev/ 国内值得看的 flutter 第二版 flutter go 虽然项目已经不再维护，但是可以下载对应的release通过app观看 wesome-flutter https://github.com/Solido/awesome-flutter google docs https://codelabs.developers.google.com/codelabs/flutter#9 学习git https://learngitbranching.js.org/?locale=zh_CN</description>
+    </item>
+    
     <item>
       <title>那些flash小游戏</title>
       <link>http://wuhaohao1234.github.io/posts/%E9%82%A3%E4%BA%9Bflash%E5%B0%8F%E6%B8%B8%E6%88%8F/</link>
