@@ -3,7 +3,14 @@
         <title>所有文章 - 阿布的博客</title>
         <link>http://wuhaohao1234.github.io/posts/</link>
         <description>所有文章 | 阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 18 Jan 2022 05:29:54 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 27 Jan 2022 23:44:06 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Rust小书</title>
+    <link>http://wuhaohao1234.github.io/posts/rust%E5%B0%8F%E4%B9%A6/</link>
+    <pubDate>Thu, 27 Jan 2022 23:44:06 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/rust%E5%B0%8F%E4%B9%A6/</guid>
+    <description><![CDATA[rust小书 rust官方文档讲的是比较详细的，这里给出一个总结(提取出核心点) 以下所有操作均在mac 快速开始 install $ curl --proto &#39;=https&#39; --tlsv1.2 https://sh.rustup.rs -sSf | sh # 测试 $ rustc --version]]></description>
+</item><item>
     <title>Flutter</title>
     <link>http://wuhaohao1234.github.io/posts/flutter/</link>
     <pubDate>Tue, 18 Jan 2022 05:29:54 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E5%8C%BA%E5%9D%97%E9%93%BE/</guid>
     <description><![CDATA[区块链 区块链（Blockchain）技术源于比特币。在比特币中，为了保证每笔交易可信并不可篡改，中本聪发明了区块链，它通过后一个区块对前一个]]></description>
-</item><item>
-    <title>思考</title>
-    <link>http://wuhaohao1234.github.io/posts/%E6%80%9D%E8%80%83/</link>
-    <pubDate>Wed, 24 Nov 2021 00:34:03 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/%E6%80%9D%E8%80%83/</guid>
-    <description><![CDATA[思考 历史虽不会重演，但总是惊人的相似 一些东西不太适合发在媒体上，会被删或者封，所以发在这里 回顾历史 具体谈的话，得从80年代改革开放谈起 背景 大]]></description>
 </item></channel>
 </rss>
