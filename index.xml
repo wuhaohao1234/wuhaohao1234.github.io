@@ -3,9 +3,16 @@
         <title>阿布的博客</title>
         <link>http://wuhaohao1234.github.io/</link>
         <description>阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 27 Jan 2022 23:44:06 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 16 Feb 2022 18:29:09 &#43;0800</lastBuildDate>
             <atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>常见面试题</title>
+    <link>http://wuhaohao1234.github.io/posts/%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+    <pubDate>Wed, 16 Feb 2022 18:29:09 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+    <description><![CDATA[常见面试题 参考文档 山月-大厂面试每日一题 剑指前端offer 若川-面试官问系列 以前整理的-面试 冴羽的博客 柯里化 是把接受多个参数的函数变换成接受]]></description>
+</item><item>
     <title>Rust小书</title>
     <link>http://wuhaohao1234.github.io/posts/rust%E5%B0%8F%E4%B9%A6/</link>
     <pubDate>Thu, 27 Jan 2022 23:44:06 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/qa%E4%B8%8Erd%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E4%B8%80%E8%B5%B7%E5%90%88%E4%BD%9C/</guid>
     <description><![CDATA[qa与rd为什么不能一起合作 谁对软件交付的质量负责？ 肯定很多人顺口就说了：肯定谁写的软件谁负责嘛，开发人员对质量负责。 但是真正的情况是：在软]]></description>
-</item><item>
-    <title>区块链</title>
-    <link>http://wuhaohao1234.github.io/posts/%E5%8C%BA%E5%9D%97%E9%93%BE/</link>
-    <pubDate>Wed, 24 Nov 2021 20:49:20 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/%E5%8C%BA%E5%9D%97%E9%93%BE/</guid>
-    <description><![CDATA[区块链 区块链（Blockchain）技术源于比特币。在比特币中，为了保证每笔交易可信并不可篡改，中本聪发明了区块链，它通过后一个区块对前一个]]></description>
 </item></channel>
 </rss>
