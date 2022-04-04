@@ -3,7 +3,14 @@
         <title>所有文章 - 阿布的博客</title>
         <link>http://wuhaohao1234.github.io/posts/</link>
         <description>所有文章 | 阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 16 Feb 2022 18:29:09 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 05 Apr 2022 00:41:03 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>读资本论，马克思，毛选等书观后感</title>
+    <link>http://wuhaohao1234.github.io/posts/%E8%AF%BB%E8%B5%84%E6%9C%AC%E8%AE%BA%E9%A9%AC%E5%85%8B%E6%80%9D%E6%AF%9B%E9%80%89%E7%AD%89%E4%B9%A6%E8%A7%82%E5%90%8E%E6%84%9F/</link>
+    <pubDate>Tue, 05 Apr 2022 00:41:03 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/%E8%AF%BB%E8%B5%84%E6%9C%AC%E8%AE%BA%E9%A9%AC%E5%85%8B%E6%80%9D%E6%AF%9B%E9%80%89%E7%AD%89%E4%B9%A6%E8%A7%82%E5%90%8E%E6%84%9F/</guid>
+    <description><![CDATA[读资本论，马克思，毛选等书观后感 北欧模式：当代世界社会主义的明灯 挪威 那是挪威，他们国家小，人口少，土地资源多，他们可以支撑起这样的缓进的改造]]></description>
+</item><item>
     <title>常见面试题</title>
     <link>http://wuhaohao1234.github.io/posts/%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
     <pubDate>Wed, 16 Feb 2022 18:29:09 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</guid>
     <description><![CDATA[前端面试 https://wuhaohao1234.github.io/resume-arco/ https://juejin.cn/post/6871956933775982606#heading-65 https://juejin.cn/post/6844904166742048782#heading-4 https://juejin.cn/post/6844904160719011848#heading-21 https://github.com/wuhaohao1234/coder-docs/blob/main/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99.md https://juejin.cn/post/6844904093492707336 链接说明 朋友链接 https://www.yuque.com/abu0418/uf2dbz/gqwnmm 内部链接 https://www.yuque.com/abu0418/kb/crk4dm 旧博文 必备技巧 输入url 发生 xxx 知识体系js 知识体系vue 常用 闭包 一个function里面re]]></description>
-</item><item>
-    <title>qa与rd为什么不能一起合作</title>
-    <link>http://wuhaohao1234.github.io/posts/qa%E4%B8%8Erd%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E4%B8%80%E8%B5%B7%E5%90%88%E4%BD%9C/</link>
-    <pubDate>Wed, 01 Dec 2021 23:09:47 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/qa%E4%B8%8Erd%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E4%B8%80%E8%B5%B7%E5%90%88%E4%BD%9C/</guid>
-    <description><![CDATA[qa与rd为什么不能一起合作 谁对软件交付的质量负责？ 肯定很多人顺口就说了：肯定谁写的软件谁负责嘛，开发人员对质量负责。 但是真正的情况是：在软]]></description>
 </item></channel>
 </rss>
