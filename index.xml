@@ -3,9 +3,16 @@
         <title>阿布的博客</title>
         <link>http://wuhaohao1234.github.io/</link>
         <description>阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 05 Apr 2022 00:41:03 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 09 May 2022 11:49:53 &#43;0800</lastBuildDate>
             <atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>React</title>
+    <link>http://wuhaohao1234.github.io/posts/react/</link>
+    <pubDate>Mon, 09 May 2022 11:49:53 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/react/</guid>
+    <description><![CDATA[react考点 在hooks中，闭包的概念很重要 在函数执行完毕后，返回函数，或者将函数得以保留下来，即形成闭包 缓存 useMemo和useCal]]></description>
+</item><item>
     <title>读资本论，马克思，毛选等书观后感</title>
     <link>http://wuhaohao1234.github.io/posts/%E8%AF%BB%E8%B5%84%E6%9C%AC%E8%AE%BA%E9%A9%AC%E5%85%8B%E6%80%9D%E6%AF%9B%E9%80%89%E7%AD%89%E4%B9%A6%E8%A7%82%E5%90%8E%E6%84%9F/</link>
     <pubDate>Tue, 05 Apr 2022 00:41:03 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E9%87%91%E8%9E%8D%E5%AD%A6/</guid>
     <description><![CDATA[金融学 经济机器是怎样运行的 (时长30分钟) Ray Dalio 经济增长的三大要素 最小单位：交易 经济体 交易 市场 经济体 市场调控 利率 利率降低，市场的钱变多，经济容]]></description>
-</item><item>
-    <title>前端面试</title>
-    <link>http://wuhaohao1234.github.io/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</link>
-    <pubDate>Thu, 02 Dec 2021 02:31:33 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</guid>
-    <description><![CDATA[前端面试 https://wuhaohao1234.github.io/resume-arco/ https://juejin.cn/post/6871956933775982606#heading-65 https://juejin.cn/post/6844904166742048782#heading-4 https://juejin.cn/post/6844904160719011848#heading-21 https://github.com/wuhaohao1234/coder-docs/blob/main/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99.md https://juejin.cn/post/6844904093492707336 链接说明 朋友链接 https://www.yuque.com/abu0418/uf2dbz/gqwnmm 内部链接 https://www.yuque.com/abu0418/kb/crk4dm 旧博文 必备技巧 输入url 发生 xxx 知识体系js 知识体系vue 常用 闭包 一个function里面re]]></description>
 </item></channel>
 </rss>
