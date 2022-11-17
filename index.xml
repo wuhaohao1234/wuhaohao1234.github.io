@@ -3,9 +3,16 @@
         <title>阿布的博客</title>
         <link>http://wuhaohao1234.github.io/</link>
         <description>阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 06 Jul 2022 08:48:42 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 01 Oct 2022 20:50:39 &#43;0800</lastBuildDate>
             <atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>关于年龄的成长</title>
+    <link>http://wuhaohao1234.github.io/posts/%E5%85%B3%E4%BA%8E%E5%B9%B4%E9%BE%84%E7%9A%84%E6%88%90%E9%95%BF/</link>
+    <pubDate>Sat, 01 Oct 2022 20:50:39 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/%E5%85%B3%E4%BA%8E%E5%B9%B4%E9%BE%84%E7%9A%84%E6%88%90%E9%95%BF/</guid>
+    <description><![CDATA[关于年龄的成长 谈谈最近一年发生的事情 5月份分手，然后一个人骑着电动车从西安到青海，在青海玩了一段时间，并做了个小生意亏了4万多。后来卖掉电动]]></description>
+</item><item>
     <title>腐败与经济</title>
     <link>http://wuhaohao1234.github.io/posts/%E8%85%90%E8%B4%A5%E4%B8%8E%E7%BB%8F%E6%B5%8E/</link>
     <pubDate>Wed, 06 Jul 2022 08:48:42 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E8%A5%BF%E5%AE%89%E7%96%AB%E6%83%85/</guid>
     <description><![CDATA[西安疫情 作者目前就生活在西安，以下是本人最真实的体会 爆发前期 在12月16日，我通过youtube，以及国外，国内的一些社交平台，西安已经出现]]></description>
-</item><item>
-    <title>灾难对于国家而言并不是坏事</title>
-    <link>http://wuhaohao1234.github.io/posts/%E7%81%BE%E9%9A%BE%E5%AF%B9%E4%BA%8E%E5%9B%BD%E5%AE%B6%E8%80%8C%E8%A8%80%E5%B9%B6%E4%B8%8D%E6%98%AF%E5%9D%8F%E4%BA%8B/</link>
-    <pubDate>Fri, 17 Dec 2021 23:47:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/%E7%81%BE%E9%9A%BE%E5%AF%B9%E4%BA%8E%E5%9B%BD%E5%AE%B6%E8%80%8C%E8%A8%80%E5%B9%B6%E4%B8%8D%E6%98%AF%E5%9D%8F%E4%BA%8B/</guid>
-    <description><![CDATA[灾难对于社会发展而言并不是坏事 灾难对于普通老百姓一定是一件坏事 这里可以举几个例子： 在一战，二战时期，各国的军事，科技都得到了空前的提高 疫情期]]></description>
 </item></channel>
 </rss>
