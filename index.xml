@@ -3,9 +3,16 @@
         <title>阿布的博客</title>
         <link>http://wuhaohao1234.github.io/</link>
         <description>阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 01 Oct 2022 20:50:39 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 02 Dec 2022 13:40:38 &#43;0800</lastBuildDate>
             <atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>谈谈白纸革命</title>
+    <link>http://wuhaohao1234.github.io/posts/%E8%B0%88%E8%B0%88%E7%99%BD%E7%BA%B8%E9%9D%A9%E5%91%BD/</link>
+    <pubDate>Fri, 02 Dec 2022 13:40:38 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/%E8%B0%88%E8%B0%88%E7%99%BD%E7%BA%B8%E9%9D%A9%E5%91%BD/</guid>
+    <description><![CDATA[谈谈白纸革命 一些文章和视频不能在其他平台发布，那么就借用这个博客发布一下，虽然会有风险，但是作为一个男人，一些观点还是要发出去 对于疫情的解读]]></description>
+</item><item>
     <title>关于年龄的成长</title>
     <link>http://wuhaohao1234.github.io/posts/%E5%85%B3%E4%BA%8E%E5%B9%B4%E9%BE%84%E7%9A%84%E6%88%90%E9%95%BF/</link>
     <pubDate>Sat, 01 Oct 2022 20:50:39 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E9%82%A3%E4%BA%9Bflash%E5%B0%8F%E6%B8%B8%E6%88%8F/</guid>
     <description><![CDATA[那些flash小游戏 作者的童年离不开：4399，7k7k等小游戏网站，里面最喜欢的游戏包含: 造梦西游3，洛克王国，美食大战老鼠，王国保卫战，]]></description>
-</item><item>
-    <title>西安疫情</title>
-    <link>http://wuhaohao1234.github.io/posts/%E8%A5%BF%E5%AE%89%E7%96%AB%E6%83%85/</link>
-    <pubDate>Fri, 31 Dec 2021 02:16:11 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/%E8%A5%BF%E5%AE%89%E7%96%AB%E6%83%85/</guid>
-    <description><![CDATA[西安疫情 作者目前就生活在西安，以下是本人最真实的体会 爆发前期 在12月16日，我通过youtube，以及国外，国内的一些社交平台，西安已经出现]]></description>
 </item></channel>
 </rss>
