@@ -3,9 +3,16 @@
         <title>阿布的博客</title>
         <link>http://wuhaohao1234.github.io/</link>
         <description>阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 10 Mar 2023 08:50:20 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 23 Mar 2023 14:01:22 &#43;0800</lastBuildDate>
             <atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Go面试题</title>
+    <link>http://wuhaohao1234.github.io/posts/go%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+    <pubDate>Thu, 23 Mar 2023 14:01:22 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/go%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+    <description><![CDATA[go 面试题 New 和 Make 的区别 在 Go 语言中，New 和 Make 都是用来在内存中分配空间的函数，但是它们的作用却略有不同。 New 函数 New 函数用于在内存中分配一块空间，并]]></description>
+</item><item>
     <title>初级前端面试</title>
     <link>http://wuhaohao1234.github.io/posts/%E5%88%9D%E7%BA%A7%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</link>
     <pubDate>Fri, 10 Mar 2023 08:50:20 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E8%AF%BB%E8%B5%84%E6%9C%AC%E8%AE%BA%E9%A9%AC%E5%85%8B%E6%80%9D%E6%AF%9B%E9%80%89%E7%AD%89%E4%B9%A6%E8%A7%82%E5%90%8E%E6%84%9F/</guid>
     <description><![CDATA[读资本论，马克思，毛选等书观后感 北欧模式：当代世界社会主义的明灯 挪威 那是挪威，他们国家小，人口少，土地资源多，他们可以支撑起这样的缓进的改造]]></description>
-</item><item>
-    <title>常见面试题</title>
-    <link>http://wuhaohao1234.github.io/posts/%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
-    <pubDate>Wed, 16 Feb 2022 18:29:09 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
-    <description><![CDATA[常见面试题 剑指前端offer 参考文档 山月-大厂面试每日一题 剑指前端offer 若川-面试官问系列 以前整理的-面试 冴羽的博客 柯里化 是把接受多个参]]></description>
 </item></channel>
 </rss>
