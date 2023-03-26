@@ -3,9 +3,16 @@
         <title>阿布的博客</title>
         <link>http://wuhaohao1234.github.io/</link>
         <description>阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 23 Mar 2023 14:52:19 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 26 Mar 2023 13:07:59 &#43;0800</lastBuildDate>
             <atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>两年前端面试</title>
+    <link>http://wuhaohao1234.github.io/posts/%E4%B8%A4%E5%B9%B4%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</link>
+    <pubDate>Sun, 26 Mar 2023 13:07:59 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/%E4%B8%A4%E5%B9%B4%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</guid>
+    <description><![CDATA[如何使用React Hooks减少组件层级 React Hooks是React 16.8版本引入的新特性，它可以帮助我们在不编写类组件的情况下将状态管理和生]]></description>
+</item><item>
     <title>太上老君说月老仙师禳婚姻真经</title>
     <link>http://wuhaohao1234.github.io/posts/%E5%A4%AA%E4%B8%8A%E8%80%81%E5%90%9B%E8%AF%B4%E6%9C%88%E8%80%81%E4%BB%99%E5%B8%88%E7%A6%B3%E5%A9%9A%E5%A7%BB%E7%9C%9F%E7%BB%8F/</link>
     <pubDate>Thu, 23 Mar 2023 14:52:19 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E5%BF%83%E6%99%BA%E6%A8%A1%E5%BC%8F%E5%86%B3%E5%AE%9A%E4%BD%A0%E7%9A%84%E4%B8%80%E7%94%9F/</guid>
     <description><![CDATA[心智模式决定你的一生 世界的四个层次 无机物层次 m 植物层次 m + x 生命力 动物 m + x + y 意识 人 m + x + y + z 自我意识 从被动到主动到过程 自由意志 人是可]]></description>
-</item><item>
-    <title>React</title>
-    <link>http://wuhaohao1234.github.io/posts/react/</link>
-    <pubDate>Mon, 09 May 2022 11:49:53 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/react/</guid>
-    <description><![CDATA[react考点 在hooks中，闭包的概念很重要 在函数执行完毕后，返回函数，或者将函数得以保留下来，即形成闭包 缓存 useMemo和useCal]]></description>
 </item></channel>
 </rss>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>两年前端面试 - 阿布的博客</title><meta name="Description" content=""><meta property="og:title" content="两年前端面试" />
+<meta property="og:description" content="如何使用React Hooks减少组件层级 React Hooks是React 16.8版本引入的新特性，它可以帮助我们在不编写类组件的情况下将状态管理和生" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wuhaohao1234.github.io/posts/%E4%B8%A4%E5%B9%B4%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-26T13:07:59+08:00" />
+<meta property="article:modified_time" content="2023-03-26T13:07:59+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="两年前端面试"/>
+<meta name="twitter:description" content="如何使用React Hooks减少组件层级 React Hooks是React 16.8版本引入的新特性，它可以帮助我们在不编写类组件的情况下将状态管理和生"/>
+<meta name="application-name" content="阿布的博客">
+<meta name="apple-mobile-web-app-title" content="阿布的博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://wuhaohao1234.github.io/posts/%E4%B8%A4%E5%B9%B4%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/" /><link rel="prev" href="http://wuhaohao1234.github.io/posts/%E5%A4%AA%E4%B8%8A%E8%80%81%E5%90%9B%E8%AF%B4%E6%9C%88%E8%80%81%E4%BB%99%E5%B8%88%E7%A6%B3%E5%A9%9A%E5%A7%BB%E7%9C%9F%E7%BB%8F/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "两年前端面试",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/wuhaohao1234.github.io\/posts\/%E4%B8%A4%E5%B9%B4%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95\/"
+        },"genre": "posts","wordcount":  5002 ,
+        "url": "http:\/\/wuhaohao1234.github.io\/posts\/%E4%B8%A4%E5%B9%B4%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95\/","datePublished": "2023-03-26T13:07:59+08:00","dateModified": "2023-03-26T13:07:59+08:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="阿布的博客">阿布的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://www.yuque.com/abu0418" rel="noopener noreffer" target="_blank"> 语雀 </a><a class="menu-item" href="https://github.com/wuhaohao1234" rel="noopener noreffer" target="_blank"> github </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="阿布的博客">阿布的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://www.yuque.com/abu0418" title="" rel="noopener noreffer" target="_blank">语雀</a><a class="menu-item" href="https://github.com/wuhaohao1234" title="" rel="noopener noreffer" target="_blank">github</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">两年前端面试</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-03-26">2023-03-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 5002 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 10 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#如何使用react-hooks减少组件层级">如何使用React Hooks减少组件层级</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="如何使用react-hooks减少组件层级">如何使用React Hooks减少组件层级</h2>
+<p>React Hooks是React 16.8版本引入的新特性，它可以帮助我们在不编写类组件的情况下将状态管理和生命周期函数添加到函数式组件中。使用Hooks可以减少组件层级，提高代码可读性和可维护性。</p>
+<p>下面是使用React Hooks减少组件层级的示例：</p>
+<pre tabindex="0"><code>import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  function increment() {
+    setCount(count + 1);
+  }
+
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Count: {count}&lt;/h1&gt;
+      &lt;button onClick={increment}&gt;Increment&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;My App&lt;/h1&gt;
+      &lt;Counter /&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default App;
+
+</code></pre><p>在上面的示例中，我们使用useState钩子来添加状态管理到Counter函数组件中。通过使用useState，我们可以在Counter组件内部使用状态变量来跟踪计数器的值，并使用setCount函数来更新该值。由于我们不需要在Counter组件外部访问状态变量或更新函数，因此我们可以将Counter组件嵌套在App组件中，从而减少了组件层级。</p>
+<p>总结一下，使用React Hooks可以将状态管理和生命周期函数添加到函数式组件中，从而可以减少组件层级并提高代码可读性和可维护性。</p>
+<p>Redux和MobX都是用于管理状态的JavaScript库，但它们的工作方式有所不同。</p>
+<p>Redux是一个基于Flux架构的库，它使用单一的存储来管理应用程序的状态。Redux的设计哲学是“单向数据流”，即数据只能沿一个方向流动。Redux使用action来描述对状态的更改，并使用reducer函数来处理这些更改。Redux还提供了中间件来处理异步操作和其他副作用。</p>
+<p>MobX是一个更加灵活的库，它使用可观察对象来管理状态。这意味着当状态发生更改时，可以自动更新相关的组件。MobX还提供了许多工具和辅助函数来帮助管理状态。</p>
+<p>虽然Redux和MobX都可以用于管理状态，但它们的使用场景有所不同。Redux更适合于大型应用程序，因为它提供了一种可预测的状态管理方案。MobX则更适用于小型应用程序，因为它提供了更大的灵活性和自由度。</p>
+<p>总之，Redux和MobX都是用于管理状态的JavaScript库，它们的工作方式有所不同，可以根据具体情况选择使用哪个库。</p>
+<p>Redux通常与Redux Thunk或Redux-Saga等中间件一起使用来处理异步操作。中间件是一个函数，它接收store的dispatch方法，并返回一个新的dispatch方法。通过使用中间件，我们可以在Redux中编写异步操作，而无需将异步逻辑放在组件中。</p>
+<p>下面是一个使用Redux Thunk处理异步操作的示例：</p>
+<pre tabindex="0"><code>import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import axios from 'axios';
+
+const initialState = {
+  loading: false,
+  data: null,
+  error: null
+};
+
+const reducer = (state = initialState, action) =&gt; {
+  switch (action.type) {
+    case 'FETCH_DATA_REQUEST':
+      return {
+        ...state,
+        loading: true
+      };
+    case 'FETCH_DATA_SUCCESS':
+      return {
+        ...state,
+        loading: false,
+        data: action.payload,
+        error: null
+      };
+    case 'FETCH_DATA_FAILURE':
+      return {
+        ...state,
+        loading: false,
+        data: null,
+        error: action.payload
+      };
+    default:
+      return state;
+  }
+};
+
+const fetchDataRequest = () =&gt; {
+  return {
+    type: 'FETCH_DATA_REQUEST'
+  };
+};
+
+const fetchDataSuccess = data =&gt; {
+  return {
+    type: 'FETCH_DATA_SUCCESS',
+    payload: data
+  };
+};
+
+const fetchDataFailure = error =&gt; {
+  return {
+    type: 'FETCH_DATA_FAILURE',
+    payload: error
+  };
+};
+
+const fetchData = () =&gt; {
+  return dispatch =&gt; {
+    dispatch(fetchDataRequest());
+    axios.get('&lt;https://api.example.com/data&gt;')
+      .then(response =&gt; {
+        const data = response.data;
+        dispatch(fetchDataSuccess(data));
+      })
+      .catch(error =&gt; {
+        const errorMsg = error.message;
+        dispatch(fetchDataFailure(errorMsg));
+      });
+  };
+};
+
+const store = createStore(reducer, applyMiddleware(thunk));
+
+store.subscribe(() =&gt; console.log(store.getState()));
+
+store.dispatch(fetchData());
+
+</code></pre><p>在上面的示例中，我们使用Redux Thunk来处理异步操作。我们定义了三个action creator函数：fetchDataRequest、fetchDataSuccess和fetchDataFailure，分别表示请求数据、成功响应和失败响应。然后，我们定义了一个名为fetchData的函数，它返回一个函数，该函数接收dispatch方法作为参数，并使用axios库执行HTTP GET请求。我们在fetchData函数中分别调用fetchDataRequest、fetchDataSuccess和fetchDataFailure函数来更新应用程序的状态。最后，我们使用applyMiddleware函数将Redux Thunk中间件应用于store，然后调用store.dispatch(fetchData())来触发异步操作。</p>
+<p>总之，通过使用Redux Thunk或其他中间件，我们可以在Redux中处理异步操作，而无需将异步逻辑放在组件中。</p>
+<p>在CSS中，我们通常使用Flexbox布局来创建灵活的布局。但是，有时候我们可能需要使用Grid布局来创建更复杂的布局。Grid布局是一个二维布局系统，它可以使我们轻松地创建多列和多行的布局。</p>
+<p>下面是一个使用Grid布局的示例：</p>
+<pre tabindex="0"><code>.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.item {
+  background-color: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+</code></pre><p>在上面的示例中，我们首先将容器的display属性设置为grid，这将启用Grid布局。然后，我们使用grid-template-columns属性将容器分成三列，每一列的宽度为1fr。我们还使用grid-gap属性设置网格间距为20像素。</p>
+<p>在容器内部，我们使用.item类来定义每个项目。我们可以使用Grid布局属性来指定每个项目在网格中的位置，例如grid-row和grid-column属性。</p>
+<p>总之，Grid布局是一个强大的布局系统，它可以帮助我们创建复杂的多列和多行布局。如果Flexbox不能满足我们的需求，则可以考虑使用Grid布局。</p>
+<p>要实现左侧固定，右侧自适应的布局，可以使用Grid布局。下面是一个示例：</p>
+<pre tabindex="0"><code>.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.sidebar {
+  background-color: #ccc;
+}
+
+.content {
+  background-color: #eee;
+  padding: 20px;
+}
+
+</code></pre><p>在上面的示例中，我们首先将容器的display属性设置为grid，这将启用Grid布局。然后，我们使用grid-template-columns属性将容器分成两列，第一列的宽度为200像素，第二列的宽度为1fr，即占用剩余空间的所有宽度。</p>
+<p>在容器内部，我们使用.sidebar类来定义左侧固定的侧边栏，使用.content类来定义右侧自适应的内容区域。</p>
+<p>总之，使用Grid布局可以轻松实现左侧固定，右侧自适应的布局。</p>
+<p>ES6 可选链操作符是一种新的 JavaScript 语法，用于处理嵌套对象的属性访问，可以避免在访问嵌套对象时出现的异常错误。</p>
+<p>在访问嵌套对象属性时，如果对象的某个属性不存在，通常会导致异常错误。例如：</p>
+<pre tabindex="0"><code>const person = {
+  name: 'Alice',
+  job: {
+    title: 'Software Engineer',
+    company: {
+      name: 'Acme Inc'
+    }
+  }
+};
+
+const companyName = person.job.company.name; // 报错：Cannot read property 'name' of undefined
+
+</code></pre><p>在上面的示例中，当我们尝试访问 <code>person.job.company.name</code> 时，由于 <code>person.job.company</code> 为 <code>undefined</code>，因此会导致异常错误。</p>
+<p>ES6 可选链操作符可以通过简化属性访问的语法来避免这种异常错误。使用可选链操作符，我们可以通过以下方式访问嵌套对象的属性：</p>
+<pre tabindex="0"><code>const companyName = person?.job?.company?.name;
+
+</code></pre><p>在上面的示例中，我们使用可选链操作符 <code>?.</code> 来访问 <code>person</code> 对象的 <code>job</code> 属性、<code>job</code> 对象的 <code>company</code> 属性和 <code>company</code> 对象的 <code>name</code> 属性。如果任何属性不存在，则表达式将返回 <code>undefined</code>，而不是导致异常错误。</p>
+<p>总之，ES6 可选链操作符是一种新的 JavaScript 语法，用于处理嵌套对象属性访问时的异常错误。使用可选链操作符，我们可以轻松地访问嵌套对象的属性，而不必担心异常错误。</p>
+<p>HTTP POST请求默认情况下不会被缓存。POST请求通常用于向服务器发送数据并获取响应，而不是获取静态资源。如果您需要缓存POST响应，可以使用HTTP缓存头来控制缓存行为。</p>
+<p>以下是一些常用的HTTP缓存头：</p>
+<ul>
+<li>Cache-Control：指定缓存策略。可以使用max-age指令指定缓存的最大时间（以秒为单位）。</li>
+<li>Expires：指定缓存到期时间。在过期时间之前，客户端可以使用缓存副本，而无需向服务器发出请求。</li>
+<li>Pragma：指定旧版HTTP/1.0的缓存策略。现在已经不再使用，Cache-Control已经取代了它的作用。</li>
+</ul>
+<p>以下是一个使用Cache-Control头来控制POST响应缓存的示例：</p>
+<pre tabindex="0"><code>const express = require('express');
+const app = express();
+
+app.post('/data', (req, res) =&gt; {
+  // 处理POST请求并生成响应数据
+  const data = { message: 'Hello, world' };
+
+  // 设置Cache-Control头以控制POST响应缓存
+  res.setHeader('Cache-Control', 'max-age=3600');
+
+  // 发送响应数据
+  res.json(data);
+});
+
+app.listen(3000, () =&gt; {
+  console.log('Server started on port 3000');
+});
+
+</code></pre><p>在上面的示例中，我们使用Express框架来处理POST请求，并设置了Cache-Control头以控制POST响应缓存。在这个例子中，我们将缓存时间设置为3600秒，这意味着在3600秒之内，客户端可以使用缓存副本，而无需向服务器发出POST请求。</p>
+<p>总之，HTTP POST请求默认情况下不会被缓存。如果您需要缓存POST响应，可以使用HTTP缓存头来控制缓存行为。常用的HTTP缓存头包括Cache-Control、Expires和Pragma。</p>
+<p>Webpack可以通过动态导入模块来实现懒加载。懒加载是一种延迟加载技术，它允许我们在需要时加载模块，而不是在首次加载时加载所有模块。</p>
+<p>以下是一个使用Webpack实现懒加载的示例：</p>
+<pre tabindex="0"><code>import('./module.js')
+  .then(module =&gt; {
+    // 使用模块
+  })
+  .catch(error =&gt; {
+    // 处理错误
+  });
+
+</code></pre><p>在上面的示例中，我们使用动态导入语法来导入模块。当我们调用<code>import('./module.js')</code>时，Webpack会异步加载<code>module.js</code>模块。一旦模块加载完成，我们就可以使用它。如果出现错误，则会捕获错误并进行处理。</p>
+<p>要使用Webpack实现懒加载，我们需要使用Webpack提供的特殊语法。在Webpack中，我们可以使用<code>import()</code>函数来动态导入模块。当Webpack遇到<code>import()</code>函数时，它会将导入的模块打包为单独的块。这个块只有在需要时才会加载，而不是在应用程序启动时加载。</p>
+<p>总之，Webpack可以通过动态导入模块来实现懒加载。使用Webpack的<code>import()</code>函数，我们可以在需要时延迟加载模块，而不是在应用程序启动时加载所有模块。</p>
+<p>要将模块添加到通过JSONP加载的模块数组中，可以使用<code>webpackJsonp</code>函数。例如：</p>
+<pre tabindex="0"><code>function loadModule(moduleName) {
+  return new Promise((resolve, reject) =&gt; {
+    window.webpackJsonp.push([
+      [moduleName],
+      {
+        [moduleName]: function(module, exports, __webpack_require__) {
+          resolve(__webpack_require__(0));
+        }
+      },
+      [[moduleName]]
+    ]);
+  });
+}
+
+loadModule('module1')
+  .then(module =&gt; {
+    // 使用模块
+  })
+  .catch(error =&gt; {
+    // 处理错误
+  });
+
+</code></pre><p>在上面的示例中，我们定义了一个<code>loadModule</code>函数，该函数接受一个<code>moduleName</code>参数。在函数内部，我们创建一个新的Promise，并使用<code>webpackJsonp</code>函数将一个新的模块推送到通过JSONP加载的模块数组中。模块被定义为一个对象，其中键为<code>moduleName</code>，值为一个函数，该函数使用所需的模块解析Promise。最后，我们将指定模块名称的数组传递给<code>webpackJsonp</code>函数。</p>
+<p>当我们使用模块名称调用<code>loadModule</code>函数时，它将将模块推送到通过JSONP加载的模块数组中。当模块加载完成时，Promise将使用所需的模块解析。</p>
+<p>总之，您可以使用<code>webpackJsonp</code>函数将模块添加到Webpack中通过JSONP加载的模块数组中。这对于在应用程序中动态加载模块非常有用。</p>
+<p>MongoDB和MySQL是两种不同类型的数据库管理系统。MongoDB是一种文档数据库，而MySQL是一种关系型数据库。</p>
+<p>MongoDB是一种NoSQL数据库，它使用JSON样式的文档来存储数据。它非常适合存储半结构化数据，例如日志文件和传感器数据。MongoDB还具有水平可扩展性，这意味着它可以轻松处理大量数据。另外，MongoDB还支持复制和片段，可以提高数据可用性。</p>
+<p>MySQL是一种关系型数据库，它使用表来存储数据。它非常适合存储结构化数据，例如订单和用户数据。MySQL还支持事务，可以确保数据的一致性和完整性。另外，MySQL还支持复制和主从复制，可以提高数据可用性和性能。</p>
+<p>总之，MongoDB和MySQL是两种不同类型的数据库管理系统。MongoDB是一种文档数据库，适合存储半结构化数据，而MySQL是一种关系型数据库，适合存储结构化数据。</p>
+<p>Jenkins是一种开源的持续集成和交付工具，用于构建、测试和部署软件。它提供了一个易于使用的Web界面，可以管理构建作业、构建历史记录和构建报告等。Jenkins还支持插件扩展，可以与其他工具集成，例如GitHub、Docker和Slack等。</p>
+<p>要使用Jenkins进行持续集成，您需要首先安装Jenkins。然后，您可以使用Jenkins Web界面创建构建作业。构建作业定义了一系列构建步骤，例如编译代码、运行测试和部署应用程序。Jenkins通过触发构建作业来执行这些步骤。一旦构建完成，Jenkins会生成构建报告，其中包含有关构建状态和问题的详细信息。</p>
+<p>Jenkins还支持自动化构建和部署。例如，您可以使用Jenkins在代码库中检测到新的提交时自动触发构建作业。如果构建成功，则可以自动部署应用程序。这可以大大减少手动干预的需要，并提高开发人员的生产力。</p>
+<p>总之，Jenkins是一种强大的持续集成和交付工具，可以帮助开发人员更轻松地构建、测试和部署软件。它提供了一个易于使用的Web界面和插件扩展，可以与其他工具集成。Jenkins还支持自动化构建和部署，可以提高开发人员的生产力和应用程序的质量。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-03-26</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E5%A4%AA%E4%B8%8A%E8%80%81%E5%90%9B%E8%AF%B4%E6%9C%88%E8%80%81%E4%BB%99%E5%B8%88%E7%A6%B3%E5%A9%9A%E5%A7%BB%E7%9C%9F%E7%BB%8F/" class="prev" rel="prev" title="太上老君说月老仙师禳婚姻真经"><i class="fas fa-angle-left fa-fw"></i>太上老君说月老仙师禳婚姻真经</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
