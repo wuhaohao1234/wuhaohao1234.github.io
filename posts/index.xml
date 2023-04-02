@@ -3,7 +3,14 @@
         <title>所有文章 - 阿布的博客</title>
         <link>http://wuhaohao1234.github.io/posts/</link>
         <description>所有文章 | 阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 26 Mar 2023 13:23:21 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 02 Apr 2023 19:29:36 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>React渲染</title>
+    <link>http://wuhaohao1234.github.io/posts/react%E6%B8%B2%E6%9F%93/</link>
+    <pubDate>Sun, 02 Apr 2023 19:29:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/react%E6%B8%B2%E6%9F%93/</guid>
+    <description><![CDATA[React渲染 react 渲染流程分为 render 和 commit 阶段。 render 阶段执行 vdom 转 fiber 的 reconcile，commit 阶段更新 dom，执行 effect 等副作用逻辑。 commit 阶段分为 before m]]></description>
+</item><item>
     <title>五年前端面试</title>
     <link>http://wuhaohao1234.github.io/posts/%E4%BA%94%E5%B9%B4%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</link>
     <pubDate>Sun, 26 Mar 2023 13:23:21 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E5%85%B3%E4%BA%8E%E5%B9%B4%E9%BE%84%E7%9A%84%E6%88%90%E9%95%BF/</guid>
     <description><![CDATA[关于年龄的成长 谈谈最近一年发生的事情 5月份分手，然后一个人骑着电动车从西安到青海，在青海玩了一段时间，并做了个小生意亏了4万多。后来卖掉电动]]></description>
-</item><item>
-    <title>腐败与经济</title>
-    <link>http://wuhaohao1234.github.io/posts/%E8%85%90%E8%B4%A5%E4%B8%8E%E7%BB%8F%E6%B5%8E/</link>
-    <pubDate>Wed, 06 Jul 2022 08:48:42 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/%E8%85%90%E8%B4%A5%E4%B8%8E%E7%BB%8F%E6%B5%8E/</guid>
-    <description><![CDATA[腐败与经济 法律是为谁制定的 法律是为上层人制定的，这里先看看核心资源都被谁掌握 石油，这里就拿延长石油举例，延长石油是属于国企 土地是归国家所有 香]]></description>
 </item></channel>
 </rss>
