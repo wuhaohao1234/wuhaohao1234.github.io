@@ -3,7 +3,21 @@
         <title>所有文章 - 阿布的博客</title>
         <link>http://wuhaohao1234.github.io/posts/</link>
         <description>所有文章 | 阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 02 Apr 2023 19:29:36 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 11 Apr 2023 00:42:41 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Java基础面试</title>
+    <link>http://wuhaohao1234.github.io/posts/java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95/</link>
+    <pubDate>Tue, 11 Apr 2023 00:42:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/java%E5%9F%BA%E7%A1%80%E9%9D%A2%E8%AF%95/</guid>
+    <description><![CDATA[java基础面试 说好了面试系列已经完结了，结果发现还是真香，嗯，以为我发现我的Java基础都没写，所以这个就算作续集了，续集第一篇请各位收好]]></description>
+</item><item>
+    <title>梅花易数</title>
+    <link>http://wuhaohao1234.github.io/posts/%E6%A2%85%E8%8A%B1%E6%98%93%E6%95%B0/</link>
+    <pubDate>Sat, 08 Apr 2023 19:30:37 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/%E6%A2%85%E8%8A%B1%E6%98%93%E6%95%B0/</guid>
+    <description><![CDATA[梅花易数 参考书籍：易经，梅花易数 象数易理篇之一 乾: 天 兑: 沼泽 离: 火 震: 雷 乾: 风 坎: 水 艮: 山 坤: 地 五行生克 金生水，水生木，木生火，火生土，土生]]></description>
+</item><item>
     <title>React渲染</title>
     <link>http://wuhaohao1234.github.io/posts/react%E6%B8%B2%E6%9F%93/</link>
     <pubDate>Sun, 02 Apr 2023 19:29:36 &#43;0800</pubDate>
@@ -59,19 +73,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E8%B0%88%E8%B0%88%E6%88%91%E7%9C%8B%E5%88%B0%E7%9A%84%E4%B8%96%E7%95%8C/</guid>
     <description><![CDATA[谈谈我看到的世界 2022年是我工作以来不寻常的一年，也是思维变化最大的一年。这一年里我从陕西先去了西北青海，又去了广东。随后又去了上海，香港]]></description>
-</item><item>
-    <title>谈谈白纸革命</title>
-    <link>http://wuhaohao1234.github.io/posts/%E8%B0%88%E8%B0%88%E7%99%BD%E7%BA%B8%E9%9D%A9%E5%91%BD/</link>
-    <pubDate>Fri, 02 Dec 2022 13:40:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/%E8%B0%88%E8%B0%88%E7%99%BD%E7%BA%B8%E9%9D%A9%E5%91%BD/</guid>
-    <description><![CDATA[谈谈白纸革命 一些文章和视频不能在其他平台发布，那么就借用这个博客发布一下，虽然会有风险，但是作为一个男人，一些观点还是要发出去 对于疫情的解读]]></description>
-</item><item>
-    <title>关于年龄的成长</title>
-    <link>http://wuhaohao1234.github.io/posts/%E5%85%B3%E4%BA%8E%E5%B9%B4%E9%BE%84%E7%9A%84%E6%88%90%E9%95%BF/</link>
-    <pubDate>Sat, 01 Oct 2022 20:50:39 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/%E5%85%B3%E4%BA%8E%E5%B9%B4%E9%BE%84%E7%9A%84%E6%88%90%E9%95%BF/</guid>
-    <description><![CDATA[关于年龄的成长 谈谈最近一年发生的事情 5月份分手，然后一个人骑着电动车从西安到青海，在青海玩了一段时间，并做了个小生意亏了4万多。后来卖掉电动]]></description>
 </item></channel>
 </rss>
