@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>前端小知识 - 阿布的博客</title><meta name="Description" content=""><meta property="og:title" content="前端小知识" />
+<meta property="og:description" content="前端小知识 RabbitMQ 前端监控 RabbitMQ是一种消息队列系统，通常用于在分布式系统中进行异步通信。在RabbitMQ中，前端监控通常涉及以下方面：" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wuhaohao1234.github.io/posts/%E5%89%8D%E7%AB%AF%E5%B0%8F%E7%9F%A5%E8%AF%86/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-06T00:04:38+08:00" />
+<meta property="article:modified_time" content="2023-05-06T00:04:38+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="前端小知识"/>
+<meta name="twitter:description" content="前端小知识 RabbitMQ 前端监控 RabbitMQ是一种消息队列系统，通常用于在分布式系统中进行异步通信。在RabbitMQ中，前端监控通常涉及以下方面："/>
+<meta name="application-name" content="阿布的博客">
+<meta name="apple-mobile-web-app-title" content="阿布的博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://wuhaohao1234.github.io/posts/%E5%89%8D%E7%AB%AF%E5%B0%8F%E7%9F%A5%E8%AF%86/" /><link rel="prev" href="http://wuhaohao1234.github.io/posts/%E6%B8%85%E5%87%80%E7%BB%8F/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "前端小知识",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/wuhaohao1234.github.io\/posts\/%E5%89%8D%E7%AB%AF%E5%B0%8F%E7%9F%A5%E8%AF%86\/"
+        },"genre": "posts","wordcount":  1853 ,
+        "url": "http:\/\/wuhaohao1234.github.io\/posts\/%E5%89%8D%E7%AB%AF%E5%B0%8F%E7%9F%A5%E8%AF%86\/","datePublished": "2023-05-06T00:04:38+08:00","dateModified": "2023-05-06T00:04:38+08:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="阿布的博客">阿布的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://www.yuque.com/abu0418" rel="noopener noreffer" target="_blank"> 语雀 </a><a class="menu-item" href="https://github.com/wuhaohao1234" rel="noopener noreffer" target="_blank"> github </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="阿布的博客">阿布的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://www.yuque.com/abu0418" title="" rel="noopener noreffer" target="_blank">语雀</a><a class="menu-item" href="https://github.com/wuhaohao1234" title="" rel="noopener noreffer" target="_blank">github</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">前端小知识</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-05-06">2023-05-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1853 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前端小知识">前端小知识</a>
+      <ul>
+        <li><a href="#rabbitmq-前端监控">RabbitMQ 前端监控</a></li>
+        <li><a href="#p-limt">p-limt</a></li>
+        <li><a href="#promiseall">promise.all</a></li>
+        <li><a href="#js-的-9-种作用域">JS 的 9 种作用域</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前端小知识">前端小知识</h2>
+<h3 id="rabbitmq-前端监控">RabbitMQ 前端监控</h3>
+<p>RabbitMQ是一种消息队列系统，通常用于在分布式系统中进行异步通信。在RabbitMQ中，前端监控通常涉及以下方面：</p>
+<p>连接数：RabbitMQ的前端监控可以通过查看当前连接数来确定RabbitMQ服务器的性能和负载情况。可以使用RabbitMQ Web管理界面或者命令行工具来查看连接数。</p>
+<p>队列状态：监控队列状态可以帮助您了解队列的长度、吞吐量以及等待时间。可以使用RabbitMQ Web管理界面或者命令行工具来查看队列状态。</p>
+<p>消息传递速率：RabbitMQ的前端监控可以帮助您了解消息传递速率，包括每秒传递的消息数量、传递的数据量等等。</p>
+<p>错误率：监控RabbitMQ服务器的错误率可以帮助您快速识别出现的问题并进行及时修复。</p>
+<h3 id="p-limt">p-limt</h3>
+<p>p-limit是一个JavaScript模块，它提供了一种限制并发异步操作的方法。它允许您指定要同时执行的最大操作数，并自动管理异步任务的排队和执行。</p>
+<p>p-limit使用Promise对象来管理异步任务的状态，它可以用于各种情况，例如限制HTTP请求的并发数、限制数据库查询的并发数、限制文件系统操作的并发数等等。p-limit还可以用于限制并发的JavaScript函数调用。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">pLimit</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;p-limit&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">limit</span> <span class="o">=</span> <span class="nx">pLimit</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+
+<span class="kr">async</span> <span class="kd">function</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// HTTP请求的异步操作
+</span><span class="c1"></span>    <span class="c1">// ...
+</span><span class="c1"></span>  <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;http://example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;http://example.net&#39;</span><span class="p">];</span>
+
+<span class="kr">async</span> <span class="kd">function</span> <span class="nx">fetchData</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">results</span> <span class="o">=</span> <span class="p">[];</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">url</span> <span class="k">of</span> <span class="nx">urls</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">limit</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">));</span>
+    <span class="nx">results</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">results</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">fetchData</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+
+</code></pre></div><h3 id="promiseall">promise.all</h3>
+<p>在使用Promise.all时，如果其中任何一个Promise对象被rejected（失败）了，Promise.all返回的Promise对象也会立即被rejected。这种情况下，您可以使用.catch()或者async/await语法来处理Promise.all的失败情况。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">promises</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">),</span>
+  <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Promise 2 Failed&#39;</span><span class="p">)),</span>
+  <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">),</span>
+<span class="p">];</span>
+
+<span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">promises</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">results</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">results</span><span class="p">);</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Promise.all failed:&#39;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+  <span class="p">});</span>
+
+</code></pre></div><p>在这个例子中，我们创建了一个包含3个Promise对象的数组。第二个Promise对象是被拒绝的，模拟一个失败的Promise。当我们使用Promise.all来等待所有Promise对象都完成后，由于第二个Promise对象被拒绝，Promise.all也会被拒绝。我们使用.catch()方法来捕获Promise.all的拒绝原因，并进行错误处理。</p>
+<p>在实际使用Promise.all时，您还可以使用async/await语法来处理Promise.all的失败情况，例如：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">myAsyncFunction</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">promises</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">),</span>
+    <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Promise 2 Failed&#39;</span><span class="p">)),</span>
+    <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">),</span>
+  <span class="p">];</span>
+
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">results</span> <span class="o">=</span> <span class="kr">await</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">promises</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">results</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Promise.all failed:&#39;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">myAsyncFunction</span><span class="p">();</span>
+
+</code></pre></div><h3 id="js-的-9-种作用域">JS 的 9 种作用域</h3>
+<p>JavaScript中的作用域决定了变量和函数在程序中的可见性和可访问性。以下是JavaScript中的九种作用域：</p>
+<p>全局作用域（Global scope）：全局作用域是程序中默认的作用域，它存在于所有函数外部，任何在全局作用域中声明的变量和函数都可以在程序的任何位置访问。</p>
+<p>函数作用域（Function scope）：函数作用域是在函数内部声明的变量和函数的作用域，这些变量和函数只能在函数内部访问。当函数执行完成后，其作用域也会随之销毁。</p>
+<p>块级作用域（Block scope）：块级作用域是在代码块（如if语句、for循环和while循环）内声明的变量的作用域。在ES6之前，JavaScript中没有块级作用域。但是，您可以使用函数作用域来模拟块级作用域。在ES6中，使用let和const关键字可以声明块级作用域变量。</p>
+<p>模块作用域（Module scope）：模块作用域是在模块文件内声明的变量和函数的作用域，这些变量和函数只能在该模块文件内访问。在ES6中，使用import和export语句可以声明模块作用域变量和函数。</p>
+<p>eval作用域（Eval scope）：eval函数的作用域是当前函数作用域或全局作用域。在eval函数内部声明的变量和函数可以在该作用域内访问。</p>
+<p>with作用域（With scope）：with语句的作用域是指定的对象的作用域。在with语句内部声明的变量和函数可以在该作用域内访问。</p>
+<p>catch作用域（Catch scope）：catch语句的作用域是错误对象的作用域。在catch语句内部声明的变量和函数可以在该作用域内访问。</p>
+<p>script作用域（Script scope）：在脚本中声明的变量和函数的作用域是script作用域。与全局作用域类似，script作用域中声明的变量和函数可以在整个脚本中访问。</p>
+<p>super作用域（Super scope）：super关键字的作用域是当前对象的父对象的作用域。在super关键字内部声明的变量和函数可以在该作用域内访问。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-05-06</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E6%B8%85%E5%87%80%E7%BB%8F/" class="prev" rel="prev" title="清净经"><i class="fas fa-angle-left fa-fw"></i>清净经</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
