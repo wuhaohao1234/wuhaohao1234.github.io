@@ -3,7 +3,21 @@
         <title>所有文章 - 阿布的博客</title>
         <link>http://wuhaohao1234.github.io/posts/</link>
         <description>所有文章 | 阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 08 May 2023 21:11:30 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 11 May 2023 23:40:22 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>交易员</title>
+    <link>http://wuhaohao1234.github.io/posts/%E4%BA%A4%E6%98%93%E5%91%98/</link>
+    <pubDate>Thu, 11 May 2023 23:40:22 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/%E4%BA%A4%E6%98%93%E5%91%98/</guid>
+    <description><![CDATA[交易员 金融市场知识：了解股票、债券、外汇、商品等金融产品的特点、交易方式、价格形成机制等。 经济学知识：理解宏观经济、微观经济以及经济指标对金]]></description>
+</item><item>
+    <title>Tensorflow</title>
+    <link>http://wuhaohao1234.github.io/posts/tensorflow/</link>
+    <pubDate>Tue, 09 May 2023 23:39:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/tensorflow/</guid>
+    <description><![CDATA[tensorflow 安装TensorFlow：你可以在TensorFlow官方网站上找到安装指南，并按照指南完成安装。 学习TensorFlow基础知识：阅读T]]></description>
+</item><item>
     <title>Threejs</title>
     <link>http://wuhaohao1234.github.io/posts/threejs/</link>
     <pubDate>Mon, 08 May 2023 21:11:30 &#43;0800</pubDate>
@@ -59,19 +73,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E4%B8%A4%E5%B9%B4%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/</guid>
     <description><![CDATA[如何使用React Hooks减少组件层级 React Hooks是React 16.8版本引入的新特性，它可以帮助我们在不编写类组件的情况下将状态管理和生]]></description>
-</item><item>
-    <title>太上老君说月老仙师禳婚姻真经</title>
-    <link>http://wuhaohao1234.github.io/posts/%E5%A4%AA%E4%B8%8A%E8%80%81%E5%90%9B%E8%AF%B4%E6%9C%88%E8%80%81%E4%BB%99%E5%B8%88%E7%A6%B3%E5%A9%9A%E5%A7%BB%E7%9C%9F%E7%BB%8F/</link>
-    <pubDate>Thu, 23 Mar 2023 14:52:19 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/%E5%A4%AA%E4%B8%8A%E8%80%81%E5%90%9B%E8%AF%B4%E6%9C%88%E8%80%81%E4%BB%99%E5%B8%88%E7%A6%B3%E5%A9%9A%E5%A7%BB%E7%9C%9F%E7%BB%8F/</guid>
-    <description><![CDATA[尔时。太上老君，在清净天上，大福堂国，长乐舍中。与飞天神王，真仙大圣，诸天帝主。聚集清净天，老君光映万天，仙乐自鸣。天花徧满，异香飞扬。诸天]]></description>
-</item><item>
-    <title>Go面试题</title>
-    <link>http://wuhaohao1234.github.io/posts/go%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
-    <pubDate>Thu, 23 Mar 2023 14:01:22 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/go%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
-    <description><![CDATA[go 面试题 New 和 Make 的区别 在 Go 语言中，New 和 Make 都是用来在内存中分配空间的函数，但是它们的作用却略有不同。 New 函数 New 函数用于在内存中分配一块空间，并]]></description>
 </item></channel>
 </rss>

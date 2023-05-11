@@ -11,7 +11,6 @@
 <meta property="og:url" content="http://wuhaohao1234.github.io/posts/%E4%B8%A4%E5%B9%B4%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-03-26T13:07:59+08:00" />
 <meta property="article:modified_time" content="2023-03-26T13:07:59+08:00" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="两年前端面试"/>
 <meta name="twitter:description" content="如何使用React Hooks减少组件层级 React Hooks是React 16.8版本引入的新特性，它可以帮助我们在不编写类组件的情况下将状态管理和生"/>
@@ -92,7 +91,7 @@
             </div><div class="content" id="content"><h2 id="如何使用react-hooks减少组件层级">如何使用React Hooks减少组件层级</h2>
 <p>React Hooks是React 16.8版本引入的新特性，它可以帮助我们在不编写类组件的情况下将状态管理和生命周期函数添加到函数式组件中。使用Hooks可以减少组件层级，提高代码可读性和可维护性。</p>
 <p>下面是使用React Hooks减少组件层级的示例：</p>
-<pre tabindex="0"><code>import React, { useState } from 'react';
+<pre tabindex="0"><code>import React, { useState } from &#39;react&#39;;
 
 function Counter() {
   const [count, setCount] = useState(0);
@@ -119,7 +118,6 @@ function App() {
 }
 
 export default App;
-
 </code></pre><p>在上面的示例中，我们使用useState钩子来添加状态管理到Counter函数组件中。通过使用useState，我们可以在Counter组件内部使用状态变量来跟踪计数器的值，并使用setCount函数来更新该值。由于我们不需要在Counter组件外部访问状态变量或更新函数，因此我们可以将Counter组件嵌套在App组件中，从而减少了组件层级。</p>
 <p>总结一下，使用React Hooks可以将状态管理和生命周期函数添加到函数式组件中，从而可以减少组件层级并提高代码可读性和可维护性。</p>
 <p>Redux和MobX都是用于管理状态的JavaScript库，但它们的工作方式有所不同。</p>
@@ -129,9 +127,9 @@ export default App;
 <p>总之，Redux和MobX都是用于管理状态的JavaScript库，它们的工作方式有所不同，可以根据具体情况选择使用哪个库。</p>
 <p>Redux通常与Redux Thunk或Redux-Saga等中间件一起使用来处理异步操作。中间件是一个函数，它接收store的dispatch方法，并返回一个新的dispatch方法。通过使用中间件，我们可以在Redux中编写异步操作，而无需将异步逻辑放在组件中。</p>
 <p>下面是一个使用Redux Thunk处理异步操作的示例：</p>
-<pre tabindex="0"><code>import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import axios from 'axios';
+<pre tabindex="0"><code>import { createStore, applyMiddleware } from &#39;redux&#39;;
+import thunk from &#39;redux-thunk&#39;;
+import axios from &#39;axios&#39;;
 
 const initialState = {
   loading: false,
@@ -141,19 +139,19 @@ const initialState = {
 
 const reducer = (state = initialState, action) =&gt; {
   switch (action.type) {
-    case 'FETCH_DATA_REQUEST':
+    case &#39;FETCH_DATA_REQUEST&#39;:
       return {
         ...state,
         loading: true
       };
-    case 'FETCH_DATA_SUCCESS':
+    case &#39;FETCH_DATA_SUCCESS&#39;:
       return {
         ...state,
         loading: false,
         data: action.payload,
         error: null
       };
-    case 'FETCH_DATA_FAILURE':
+    case &#39;FETCH_DATA_FAILURE&#39;:
       return {
         ...state,
         loading: false,
@@ -167,20 +165,20 @@ const reducer = (state = initialState, action) =&gt; {
 
 const fetchDataRequest = () =&gt; {
   return {
-    type: 'FETCH_DATA_REQUEST'
+    type: &#39;FETCH_DATA_REQUEST&#39;
   };
 };
 
 const fetchDataSuccess = data =&gt; {
   return {
-    type: 'FETCH_DATA_SUCCESS',
+    type: &#39;FETCH_DATA_SUCCESS&#39;,
     payload: data
   };
 };
 
 const fetchDataFailure = error =&gt; {
   return {
-    type: 'FETCH_DATA_FAILURE',
+    type: &#39;FETCH_DATA_FAILURE&#39;,
     payload: error
   };
 };
@@ -188,7 +186,7 @@ const fetchDataFailure = error =&gt; {
 const fetchData = () =&gt; {
   return dispatch =&gt; {
     dispatch(fetchDataRequest());
-    axios.get('&lt;https://api.example.com/data&gt;')
+    axios.get(&#39;&lt;https://api.example.com/data&gt;&#39;)
       .then(response =&gt; {
         const data = response.data;
         dispatch(fetchDataSuccess(data));
@@ -205,7 +203,6 @@ const store = createStore(reducer, applyMiddleware(thunk));
 store.subscribe(() =&gt; console.log(store.getState()));
 
 store.dispatch(fetchData());
-
 </code></pre><p>在上面的示例中，我们使用Redux Thunk来处理异步操作。我们定义了三个action creator函数：fetchDataRequest、fetchDataSuccess和fetchDataFailure，分别表示请求数据、成功响应和失败响应。然后，我们定义了一个名为fetchData的函数，它返回一个函数，该函数接收dispatch方法作为参数，并使用axios库执行HTTP GET请求。我们在fetchData函数中分别调用fetchDataRequest、fetchDataSuccess和fetchDataFailure函数来更新应用程序的状态。最后，我们使用applyMiddleware函数将Redux Thunk中间件应用于store，然后调用store.dispatch(fetchData())来触发异步操作。</p>
 <p>总之，通过使用Redux Thunk或其他中间件，我们可以在Redux中处理异步操作，而无需将异步逻辑放在组件中。</p>
 <p>在CSS中，我们通常使用Flexbox布局来创建灵活的布局。但是，有时候我们可能需要使用Grid布局来创建更复杂的布局。Grid布局是一个二维布局系统，它可以使我们轻松地创建多列和多行的布局。</p>
@@ -221,7 +218,6 @@ store.dispatch(fetchData());
   padding: 20px;
   text-align: center;
 }
-
 </code></pre><p>在上面的示例中，我们首先将容器的display属性设置为grid，这将启用Grid布局。然后，我们使用grid-template-columns属性将容器分成三列，每一列的宽度为1fr。我们还使用grid-gap属性设置网格间距为20像素。</p>
 <p>在容器内部，我们使用.item类来定义每个项目。我们可以使用Grid布局属性来指定每个项目在网格中的位置，例如grid-row和grid-column属性。</p>
 <p>总之，Grid布局是一个强大的布局系统，它可以帮助我们创建复杂的多列和多行布局。如果Flexbox不能满足我们的需求，则可以考虑使用Grid布局。</p>
@@ -239,28 +235,25 @@ store.dispatch(fetchData());
   background-color: #eee;
   padding: 20px;
 }
-
 </code></pre><p>在上面的示例中，我们首先将容器的display属性设置为grid，这将启用Grid布局。然后，我们使用grid-template-columns属性将容器分成两列，第一列的宽度为200像素，第二列的宽度为1fr，即占用剩余空间的所有宽度。</p>
 <p>在容器内部，我们使用.sidebar类来定义左侧固定的侧边栏，使用.content类来定义右侧自适应的内容区域。</p>
 <p>总之，使用Grid布局可以轻松实现左侧固定，右侧自适应的布局。</p>
 <p>ES6 可选链操作符是一种新的 JavaScript 语法，用于处理嵌套对象的属性访问，可以避免在访问嵌套对象时出现的异常错误。</p>
 <p>在访问嵌套对象属性时，如果对象的某个属性不存在，通常会导致异常错误。例如：</p>
 <pre tabindex="0"><code>const person = {
-  name: 'Alice',
+  name: &#39;Alice&#39;,
   job: {
-    title: 'Software Engineer',
+    title: &#39;Software Engineer&#39;,
     company: {
-      name: 'Acme Inc'
+      name: &#39;Acme Inc&#39;
     }
   }
 };
 
-const companyName = person.job.company.name; // 报错：Cannot read property 'name' of undefined
-
+const companyName = person.job.company.name; // 报错：Cannot read property &#39;name&#39; of undefined
 </code></pre><p>在上面的示例中，当我们尝试访问 <code>person.job.company.name</code> 时，由于 <code>person.job.company</code> 为 <code>undefined</code>，因此会导致异常错误。</p>
 <p>ES6 可选链操作符可以通过简化属性访问的语法来避免这种异常错误。使用可选链操作符，我们可以通过以下方式访问嵌套对象的属性：</p>
 <pre tabindex="0"><code>const companyName = person?.job?.company?.name;
-
 </code></pre><p>在上面的示例中，我们使用可选链操作符 <code>?.</code> 来访问 <code>person</code> 对象的 <code>job</code> 属性、<code>job</code> 对象的 <code>company</code> 属性和 <code>company</code> 对象的 <code>name</code> 属性。如果任何属性不存在，则表达式将返回 <code>undefined</code>，而不是导致异常错误。</p>
 <p>总之，ES6 可选链操作符是一种新的 JavaScript 语法，用于处理嵌套对象属性访问时的异常错误。使用可选链操作符，我们可以轻松地访问嵌套对象的属性，而不必担心异常错误。</p>
 <p>HTTP POST请求默认情况下不会被缓存。POST请求通常用于向服务器发送数据并获取响应，而不是获取静态资源。如果您需要缓存POST响应，可以使用HTTP缓存头来控制缓存行为。</p>
@@ -271,36 +264,34 @@ const companyName = person.job.company.name; // 报错：Cannot read property 'n
 <li>Pragma：指定旧版HTTP/1.0的缓存策略。现在已经不再使用，Cache-Control已经取代了它的作用。</li>
 </ul>
 <p>以下是一个使用Cache-Control头来控制POST响应缓存的示例：</p>
-<pre tabindex="0"><code>const express = require('express');
+<pre tabindex="0"><code>const express = require(&#39;express&#39;);
 const app = express();
 
-app.post('/data', (req, res) =&gt; {
+app.post(&#39;/data&#39;, (req, res) =&gt; {
   // 处理POST请求并生成响应数据
-  const data = { message: 'Hello, world' };
+  const data = { message: &#39;Hello, world&#39; };
 
   // 设置Cache-Control头以控制POST响应缓存
-  res.setHeader('Cache-Control', 'max-age=3600');
+  res.setHeader(&#39;Cache-Control&#39;, &#39;max-age=3600&#39;);
 
   // 发送响应数据
   res.json(data);
 });
 
 app.listen(3000, () =&gt; {
-  console.log('Server started on port 3000');
+  console.log(&#39;Server started on port 3000&#39;);
 });
-
 </code></pre><p>在上面的示例中，我们使用Express框架来处理POST请求，并设置了Cache-Control头以控制POST响应缓存。在这个例子中，我们将缓存时间设置为3600秒，这意味着在3600秒之内，客户端可以使用缓存副本，而无需向服务器发出POST请求。</p>
 <p>总之，HTTP POST请求默认情况下不会被缓存。如果您需要缓存POST响应，可以使用HTTP缓存头来控制缓存行为。常用的HTTP缓存头包括Cache-Control、Expires和Pragma。</p>
 <p>Webpack可以通过动态导入模块来实现懒加载。懒加载是一种延迟加载技术，它允许我们在需要时加载模块，而不是在首次加载时加载所有模块。</p>
 <p>以下是一个使用Webpack实现懒加载的示例：</p>
-<pre tabindex="0"><code>import('./module.js')
+<pre tabindex="0"><code>import(&#39;./module.js&#39;)
   .then(module =&gt; {
     // 使用模块
   })
   .catch(error =&gt; {
     // 处理错误
   });
-
 </code></pre><p>在上面的示例中，我们使用动态导入语法来导入模块。当我们调用<code>import('./module.js')</code>时，Webpack会异步加载<code>module.js</code>模块。一旦模块加载完成，我们就可以使用它。如果出现错误，则会捕获错误并进行处理。</p>
 <p>要使用Webpack实现懒加载，我们需要使用Webpack提供的特殊语法。在Webpack中，我们可以使用<code>import()</code>函数来动态导入模块。当Webpack遇到<code>import()</code>函数时，它会将导入的模块打包为单独的块。这个块只有在需要时才会加载，而不是在应用程序启动时加载。</p>
 <p>总之，Webpack可以通过动态导入模块来实现懒加载。使用Webpack的<code>import()</code>函数，我们可以在需要时延迟加载模块，而不是在应用程序启动时加载所有模块。</p>
@@ -319,14 +310,13 @@ app.listen(3000, () =&gt; {
   });
 }
 
-loadModule('module1')
+loadModule(&#39;module1&#39;)
   .then(module =&gt; {
     // 使用模块
   })
   .catch(error =&gt; {
     // 处理错误
   });
-
 </code></pre><p>在上面的示例中，我们定义了一个<code>loadModule</code>函数，该函数接受一个<code>moduleName</code>参数。在函数内部，我们创建一个新的Promise，并使用<code>webpackJsonp</code>函数将一个新的模块推送到通过JSONP加载的模块数组中。模块被定义为一个对象，其中键为<code>moduleName</code>，值为一个函数，该函数使用所需的模块解析Promise。最后，我们将指定模块名称的数组传递给<code>webpackJsonp</code>函数。</p>
 <p>当我们使用模块名称调用<code>loadModule</code>函数时，它将将模块推送到通过JSONP加载的模块数组中。当模块加载完成时，Promise将使用所需的模块解析。</p>
 <p>总之，您可以使用<code>webpackJsonp</code>函数将模块添加到Webpack中通过JSONP加载的模块数组中。这对于在应用程序中动态加载模块非常有用。</p>
@@ -366,7 +356,7 @@ loadModule('module1')
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Tensorflow - 阿布的博客</title><meta name="Description" content=""><meta property="og:title" content="Tensorflow" />
+<meta property="og:description" content="tensorflow 安装TensorFlow：你可以在TensorFlow官方网站上找到安装指南，并按照指南完成安装。 学习TensorFlow基础知识：阅读T" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wuhaohao1234.github.io/posts/tensorflow/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-09T23:39:15+08:00" />
+<meta property="article:modified_time" content="2023-05-09T23:39:15+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tensorflow"/>
+<meta name="twitter:description" content="tensorflow 安装TensorFlow：你可以在TensorFlow官方网站上找到安装指南，并按照指南完成安装。 学习TensorFlow基础知识：阅读T"/>
+<meta name="application-name" content="阿布的博客">
+<meta name="apple-mobile-web-app-title" content="阿布的博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://wuhaohao1234.github.io/posts/tensorflow/" /><link rel="prev" href="http://wuhaohao1234.github.io/posts/threejs/" /><link rel="next" href="http://wuhaohao1234.github.io/posts/%E4%BA%A4%E6%98%93%E5%91%98/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Tensorflow",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/wuhaohao1234.github.io\/posts\/tensorflow\/"
+        },"genre": "posts","wordcount":  1031 ,
+        "url": "http:\/\/wuhaohao1234.github.io\/posts\/tensorflow\/","datePublished": "2023-05-09T23:39:15+08:00","dateModified": "2023-05-09T23:39:15+08:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="阿布的博客">阿布的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://www.yuque.com/abu0418" rel="noopener noreffer" target="_blank"> 语雀 </a><a class="menu-item" href="https://github.com/wuhaohao1234" rel="noopener noreffer" target="_blank"> github </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="阿布的博客">阿布的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://www.yuque.com/abu0418" title="" rel="noopener noreffer" target="_blank">语雀</a><a class="menu-item" href="https://github.com/wuhaohao1234" title="" rel="noopener noreffer" target="_blank">github</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Tensorflow</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-05-09">2023-05-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1031 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#tensorflow">tensorflow</a>
+      <ul>
+        <li><a href="#tensorflow基本概念">tensorflow基本概念</a></li>
+        <li><a href="#编写你的第一个tensorflow程序">编写你的第一个TensorFlow程序</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="tensorflow">tensorflow</h2>
+<p>安装TensorFlow：你可以在TensorFlow官方网站上找到安装指南，并按照指南完成安装。</p>
+<p>学习TensorFlow基础知识：阅读TensorFlow官方文档，学习TensorFlow的基本概念，例如张量、计算图、会话和变量等。</p>
+<p>编写你的第一个TensorFlow程序：可以从简单的线性回归模型开始，编写一个小型的TensorFlow程序。在这个过程中，你将了解如何定义张量和操作，并学习如何训练和评估模型。</p>
+<p>探索更复杂的模型：完成第一个程序后，可以逐步探索更复杂的模型，例如卷积神经网络和递归神经网络。可以通过查看官方文档或参考开源项目学习如何实现这些模型。</p>
+<p>练习并参与社区：最后，可以加入TensorFlow社区，与其他人交流学习经验，参加线上或线下的学习活动，或者自己开发TensorFlow项目。这些都可以帮助你更好地学习和使用TensorFlow。</p>
+<h3 id="tensorflow基本概念">tensorflow基本概念</h3>
+<p>张量（Tensor）：TensorFlow 中的基本数据类型是张量，它类似于多维数组。张量可以存储任意维度的数据，并且可以包含各种类型的数据，例如浮点数、整数和字符串等。</p>
+<p>计算图（Computational Graph）：TensorFlow 使用计算图来描述计算过程。计算图由节点和边组成，节点表示操作，边表示张量之间的依赖关系。在计算图中，每个节点都接收一个或多个张量作为输入，并生成一个或多个张量作为输出。</p>
+<p>会话（Session）：TensorFlow 中的会话用于执行计算图中的操作。在会话中，TensorFlow 可以根据计算图自动优化操作的执行顺序，从而提高计算效率。</p>
+<p>变量（Variable）：变量是一种特殊的张量，可以在计算图中保持其值不变。在训练神经网络时，变量通常用于存储模型的参数，例如权重和偏置。</p>
+<p>损失函数（Loss Function）：损失函数用于衡量模型的预测值与真实值之间的差距。在训练神经网络时，优化器会根据损失函数的值来调整模型的参数，从而使模型的预测值更加接近真实值。</p>
+<p>优化器（Optimizer）：优化器用于根据损失函数的值来更新模型的参数。TensorFlow 提供了多种优化器，例如梯度下降法、Adam 等。</p>
+<h3 id="编写你的第一个tensorflow程序">编写你的第一个TensorFlow程序</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 定义训练数据</span>
+</span></span><span class="line"><span class="cl"><span class="n">train_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">train_y</span> <span class="o">=</span> <span class="n">train_x</span> <span class="o">*</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 定义模型参数</span>
+</span></span><span class="line"><span class="cl"><span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">1</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 定义模型</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">W</span> <span class="o">*</span> <span class="n">train_x</span> <span class="o">+</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 定义损失函数和优化器</span>
+</span></span><span class="line"><span class="cl"><span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_mean</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">train_y</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">train</span> <span class="o">=</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">minimize</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 训练模型</span>
+</span></span><span class="line"><span class="cl"><span class="n">sess</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">init</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">global_variables_initializer</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">init</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">201</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">step</span> <span class="o">%</span> <span class="mi">20</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">W</span><span class="p">),</span> <span class="n">sess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 关闭会话</span>
+</span></span><span class="line"><span class="cl"><span class="n">sess</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-05-09</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/threejs/" class="prev" rel="prev" title="Threejs"><i class="fas fa-angle-left fa-fw"></i>Threejs</a>
+            <a href="/posts/%E4%BA%A4%E6%98%93%E5%91%98/" class="next" rel="next" title="交易员">交易员<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

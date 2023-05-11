@@ -11,7 +11,6 @@
 <meta property="og:url" content="http://wuhaohao1234.github.io/posts/%E4%BA%94%E5%B9%B4%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-03-26T13:23:21+08:00" />
 <meta property="article:modified_time" content="2023-03-26T13:23:21+08:00" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="五年前端面试"/>
 <meta name="twitter:description" content="iframe通信 在Web开发中，iframe标签可以用来在网页中嵌入其他网页或内容，但是它们之间的通信可能会面临一些挑战。本文将讨论如何在不"/>
@@ -27,7 +26,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/wuhaohao1234.github.io\/posts\/%E4%BA%94%E5%B9%B4%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95\/"
-        },"genre": "posts","wordcount":  5241 ,
+        },"genre": "posts","wordcount":  5325 ,
         "url": "http:\/\/wuhaohao1234.github.io\/posts\/%E4%BA%94%E5%B9%B4%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95\/","datePublished": "2023-03-26T13:23:21+08:00","dateModified": "2023-03-26T13:23:21+08:00","publisher": {
             "@type": "Organization",
             "name": "作者"},"author": {
@@ -77,7 +76,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">五年前端面试</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-03-26">2023-03-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 5241 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-03-26">2023-03-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 5325 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 11 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -99,16 +98,15 @@
 <p>window.postMessage()方法允许不同的窗口之间互相发送消息。当调用该方法时，可以指定消息内容和接收消息的窗口的来源。在iframe中，我们可以通过window.parent.postMessage()方法向包含iframe的窗口发送消息，也可以通过window.frames[index].postMessage()方法向同一页面中的其他iframe发送消息。</p>
 <p>例如，以下代码演示了如何在两个iframe之间发送消息：</p>
 <pre tabindex="0"><code>// 在iframe1中发送消息到iframe2
-window.parent.frames[1].postMessage('Hello from iframe1!', '&lt;http://localhost:8080/iframe2.html&gt;');
+window.parent.frames[1].postMessage(&#39;Hello from iframe1!&#39;, &#39;&lt;http://localhost:8080/iframe2.html&gt;&#39;);
 
 // 在iframe2中接收消息
-window.addEventListener('message', function(event) {
-  if (event.origin === '&lt;http://localhost:8080&gt;' &amp;&amp; event.data === 'Hello from iframe1!') {
-    console.log('Message received in iframe2!');
+window.addEventListener(&#39;message&#39;, function(event) {
+  if (event.origin === &#39;&lt;http://localhost:8080&gt;&#39; &amp;&amp; event.data === &#39;Hello from iframe1!&#39;) {
+    console.log(&#39;Message received in iframe2!&#39;);
   }
 });
-
-</code></pre><p>在以上代码中，我们在iframe1中发送了一条消息到iframe2，指定了接收方的来源为'<a href="http://localhost:8080/iframe2.html" target="_blank" rel="noopener noreffer">http://localhost:8080/iframe2.html</a>'。在iframe2中，我们通过window.addEventListener()方法监听message事件，并检查消息来源和内容来确认是否接收到了正确的消息。</p>
+</code></pre><p>在以上代码中，我们在iframe1中发送了一条消息到iframe2，指定了接收方的来源为&rsquo;<a href="http://localhost:8080/iframe2.html" target="_blank" rel="noopener noreffer">http://localhost:8080/iframe2.html</a>&rsquo;。在iframe2中，我们通过window.addEventListener()方法监听message事件，并检查消息来源和内容来确认是否接收到了正确的消息。</p>
 <h2 id="postmessage方法的安全性">postMessage()方法的安全性</h2>
 <p>尽管postMessage()方法可以方便地在不同的iframe之间进行通信，但是需要注意它的安全性。由于postMessage()方法的接收方可以是任何窗口，因此需要确保消息来源是可信的。在以上示例中，我们使用了event.origin来检查来源，以确保消息来自正确的窗口。此外，还可以将消息内容进行加密，以防止被篡改。</p>
 <h2 id="其他通信方式">其他通信方式</h2>
@@ -119,16 +117,16 @@ window.addEventListener('message', function(event) {
 <p>在页面中添加水印可以有效地保护敏感信息，防止信息被恶意复制或泄露。以下是一个简单的水印组件示例：</p>
 <pre tabindex="0"><code>// 创建水印
 function createWatermark(text) {
-  var canvas = document.createElement('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.createElement(&#39;canvas&#39;);
+  var ctx = canvas.getContext(&#39;2d&#39;);
   canvas.width = 200;
   canvas.height = 150;
-  ctx.font = '20px Arial';
-  ctx.fillStyle = '#ccc';
-  ctx.textAlign = 'center';
+  ctx.font = &#39;20px Arial&#39;;
+  ctx.fillStyle = &#39;#ccc&#39;;
+  ctx.textAlign = &#39;center&#39;;
   ctx.rotate(-30 * Math.PI / 180);
   ctx.fillText(text, -canvas.height / 2, canvas.width / 2);
-  return canvas.toDataURL('image/png');
+  return canvas.toDataURL(&#39;image/png&#39;);
 }
 
 // 添加水印
@@ -138,19 +136,18 @@ function applyWatermark(selector, text) {
     var element = elements[i];
     var img = new Image();
     img.src = createWatermark(text);
-    img.style.position = 'absolute';
-    img.style.left = '0';
-    img.style.top = '0';
-    img.style.opacity = '0.2';
-    element.style.position = 'relative';
-    element.style.overflow = 'hidden';
+    img.style.position = &#39;absolute&#39;;
+    img.style.left = &#39;0&#39;;
+    img.style.top = &#39;0&#39;;
+    img.style.opacity = &#39;0.2&#39;;
+    element.style.position = &#39;relative&#39;;
+    element.style.overflow = &#39;hidden&#39;;
     element.appendChild(img);
   }
 }
 
 // 使用示例
-applyWatermark('.watermark', 'confidential');
-
+applyWatermark(&#39;.watermark&#39;, &#39;confidential&#39;);
 </code></pre><p>在以上代码中，我们首先通过createWatermark()方法创建了一张带有指定文本的水印图片，并将其转换为base64格式。然后，我们通过applyWatermark()方法将水印图片添加到指定的元素中，将元素的position属性设置为relative，以便让水印图片的position属性相对于该元素的位置进行定位。</p>
 <p>需要注意的是，由于水印图片是通过canvas绘制而成的，因此需要考虑浏览器兼容性的问题。此外，水印图片的位置和透明度可以根据需求进行自定义调整。</p>
 <p>总之，通过使用水印组件，可以有效地保护敏感信息，防止信息被恶意复制或泄露。</p>
@@ -158,22 +155,20 @@ applyWatermark('.watermark', 'confidential');
 <ul>
 <li>
 <p><strong>禁用删除键</strong>：可以通过JavaScript来禁用删除键，以防止用户误操作。以下是一个示例代码：</p>
-<pre tabindex="0"><code>document.addEventListener('keydown', function(event) {
+<pre tabindex="0"><code>document.addEventListener(&#39;keydown&#39;, function(event) {
   if (event.keyCode === 46) { // 46表示删除键的键码
     event.preventDefault(); // 阻止默认操作
   }
 });
-
 </code></pre></li>
 <li>
 <p><strong>添加确认提示</strong>：可以在删除操作前添加确认提示，以防止用户误操作。以下是一个示例代码：</p>
 <pre tabindex="0"><code>function confirmDelete() {
-  var result = confirm('确定要删除吗？');
+  var result = confirm(&#39;确定要删除吗？&#39;);
   if (result) {
     // 执行删除操作
   }
 }
-
 </code></pre></li>
 <li>
 <p><strong>使用权限控制</strong>：可以通过权限控制来限制用户对某些内容的删除操作。例如，只允许管理员或特定用户对某些内容进行删除操作。</p>
@@ -189,17 +184,17 @@ applyWatermark('.watermark', 'confidential');
 <p>要使用 MutationObserver，首先创建一个新的观察器实例，并指定一个回调函数，在变化发生时调用该函数。你还需要指定一组选项，控制要监视哪些类型的变化。例如，你可以指定是否监视子元素、属性或文本内容的变化。</p>
 <p>以下是使用 MutationObserver 监视特定元素文本内容变化的示例：</p>
 <pre tabindex="0"><code>// 选择要观察变化的节点
-const targetNode = document.querySelector('#target');
+const targetNode = document.querySelector(&#39;#target&#39;);
 
 // 创建一个新的观察器实例
 const observer = new MutationObserver((mutationsList, observer) =&gt; {
     for (const mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-            console.log('子节点已添加或删除。');
-        } else if (mutation.type === 'attributes') {
-            console.log(mutation.attributeName + '属性已修改。');
-        } else if (mutation.type === 'characterData') {
-            console.log('节点的文本内容已更改。');
+        if (mutation.type === &#39;childList&#39;) {
+            console.log(&#39;子节点已添加或删除。&#39;);
+        } else if (mutation.type === &#39;attributes&#39;) {
+            console.log(mutation.attributeName + &#39;属性已修改。&#39;);
+        } else if (mutation.type === &#39;characterData&#39;) {
+            console.log(&#39;节点的文本内容已更改。&#39;);
         }
     }
 });
@@ -209,48 +204,46 @@ const config = { attributes: true, childList: true, subtree: true };
 
 // 开始观察目标节点的配置变化
 observer.observe(targetNode, config);
-
 </code></pre><p>在此示例中，我们首先使用 <code>document.querySelector()</code> 选择要观察的元素。然后，我们创建一个 MutationObserver 类的新实例，并指定一个回调函数，该函数在发生变化时将被调用。最后，我们调用观察器对象的 <code>observe()</code> 方法，传入目标元素和一组选项，指定要监视哪些类型的变化。</p>
 <p>默认情况下，观察器只监视目标元素的直接子节点的变化。但是，您还可以指定 <code>subtree</code> 选项，以监视所有后代节点的变化。</p>
 <p>总的来说，MutationObserver 提供了一种强大而灵活的方法，可以监视 DOM 的变化并实时响应这些变化。</p>
 <p>antd 的穿梭框组件是一种常见的用户界面元素，用于在两个列表之间移动项目。它通常包含两个列表框，每个列表框都有一个搜索框和一个可以选择的项目列表。用户可以通过将项目从一个列表框移动到另一个列表框来执行操作。</p>
 <p>以下是一个简单的示例代码，演示了如何使用 antd 的穿梭框组件：</p>
-<pre tabindex="0"><code>import { Transfer } from 'antd';
+<pre tabindex="0"><code>import { Transfer } from &#39;antd&#39;;
 
 const data = [
   {
-    key: '1',
-    title: '选项1',
+    key: &#39;1&#39;,
+    title: &#39;选项1&#39;,
   },
   {
-    key: '2',
-    title: '选项2',
+    key: &#39;2&#39;,
+    title: &#39;选项2&#39;,
   },
   {
-    key: '3',
-    title: '选项3',
+    key: &#39;3&#39;,
+    title: &#39;选项3&#39;,
   },
   {
-    key: '4',
-    title: '选项4',
+    key: &#39;4&#39;,
+    title: &#39;选项4&#39;,
   },
 ];
 
 function handleChange(targetKeys) {
-  console.log('选中的项目:', targetKeys);
+  console.log(&#39;选中的项目:&#39;, targetKeys);
 }
 
 &lt;Transfer dataSource={data} showSearch targetKeys={[]} onChange={handleChange} /&gt;
-
 </code></pre><p>在以上代码中，我们首先导入 antd 的 Transfer 组件，然后定义了一个包含多个项目的数据源。我们还定义了一个 handleChange() 函数，该函数在用户选择项目时将被调用，并将选中的项目作为参数传递给它。最后，我们使用 Transfer 组件来呈现两个列表框，其中一个用于显示所有可用项目，另一个为空，用户可以通过将项目从一个列表框移动到另一个列表框来执行操作。</p>
 <p>需要注意的是，Transfer 组件支持许多选项和配置，例如搜索、过滤、自定义渲染等。您可以根据实际需要进行适当的调整和配置。</p>
 <p>总之，antd 的穿梭框组件是一个非常有用的用户界面元素，可以帮助用户轻松地在两个列表之间移动项目。通过使用它，您可以提高用户体验并增强应用程序的交互性。</p>
 <p><code>useTable</code> 是由 <code>react-table</code> 库提供的自定义 React Hook，可让您轻松地在 React 应用程序中创建数据表。它提供了一个灵活和可自定义的 API，用于处理数据、排序、过滤、分页等等。</p>
 <p>要使用 <code>useTable</code>，您需要首先定义您的表格列和数据，然后将它们与任何所需的选项或插件一起传递给钩子。该钩子返回一个包含呈现和与表格交互所需的必要数据和函数的对象。</p>
 <p>以下是如何在 antd React 中使用 <code>useTable</code> 创建简单数据表的示例：</p>
-<pre tabindex="0"><code>import React from 'react';
-import { useTable } from 'react-table';
-import { Table } from 'antd';
+<pre tabindex="0"><code>import React from &#39;react&#39;;
+import { useTable } from &#39;react-table&#39;;
+import { Table } from &#39;antd&#39;;
 
 function AntdTable({ columns, data }) {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({
@@ -264,7 +257,7 @@ function AntdTable({ columns, data }) {
         {headerGroups.map(headerGroup =&gt; (
           &lt;tr {...headerGroup.getHeaderGroupProps()}&gt;
             {headerGroup.headers.map(column =&gt; (
-              &lt;th {...column.getHeaderProps()}&gt;{column.render('Header')}&lt;/th&gt;
+              &lt;th {...column.getHeaderProps()}&gt;{column.render(&#39;Header&#39;)}&lt;/th&gt;
             ))}
           &lt;/tr&gt;
         ))}
@@ -275,7 +268,7 @@ function AntdTable({ columns, data }) {
           return (
             &lt;tr {...row.getRowProps()}&gt;
               {row.cells.map(cell =&gt; (
-                &lt;td {...cell.getCellProps()}&gt;{cell.render('Cell')}&lt;/td&gt;
+                &lt;td {...cell.getCellProps()}&gt;{cell.render(&#39;Cell&#39;)}&lt;/td&gt;
               ))}
             &lt;/tr&gt;
           );
@@ -286,19 +279,18 @@ function AntdTable({ columns, data }) {
 }
 
 export default AntdTable;
-
 </code></pre><p>在这个例子中，我们定义了一个 <code>AntdTable</code> 组件，它接受 <code>columns</code> 和 <code>data</code> props。在组件内部，我们使用 <code>columns</code> 和 <code>data</code> 选项调用 <code>useTable</code>，并检索呈现表格所需的必要数据和函数。然后，我们使用这些函数生成必要的 HTML 表格，包括标题和正文行和单元格。</p>
 <p>总体而言，<code>useTable</code> 提供了一种强大而灵活的方法，在您的 React 应用程序中创建数据表，支持许多常见的功能和插件。同时，结合 antd UI 组件库使用可以更加方便快捷。</p>
 <p><code>swr</code> 是一个 React Hooks 库，用于在网络请求过程中管理数据缓存和更新。它提供了一种简单且灵活的方式来处理数据请求，同时还提供了一些有用的特性，例如自动重试、缓存失效、数据本地更新等等。</p>
 <p>使用 <code>swr</code>，您可以轻松地将数据请求逻辑从应用程序组件中分离出来，并使用自定义钩子来管理数据。以下是一个简单的使用 <code>swr</code> 的示例代码：</p>
-<pre tabindex="0"><code>import useSWR from 'swr';
+<pre tabindex="0"><code>import useSWR from &#39;swr&#39;;
 
 function fetcher(url) {
   return fetch(url).then(res =&gt; res.json());
 }
 
 function App() {
-  const { data, error } = useSWR('/api/data', fetcher);
+  const { data, error } = useSWR(&#39;/api/data&#39;, fetcher);
 
   if (error) return &lt;div&gt;出错了: {error.message}&lt;/div&gt;;
   if (!data) return &lt;div&gt;正在加载...&lt;/div&gt;;
@@ -311,7 +303,6 @@ function App() {
     &lt;/div&gt;
   );
 }
-
 </code></pre><p>在这个例子中，我们首先定义了一个 <code>fetcher</code> 函数，它将传递的 URL 作为参数，并返回一个 Promise，该 Promise 解析为 JSON 数据。然后，我们在 <code>App</code> 组件中使用 <code>useSWR</code> 钩子，传递我们要请求的 URL 和 <code>fetcher</code> 函数。钩子返回一个对象，其中包含 <code>data</code> 和 <code>error</code> 属性，分别表示请求返回的数据和任何错误。</p>
 <p>如果发生错误，我们将显示错误消息，否则我们将显示数据列表。由于 <code>useSWR</code> 会自动缓存数据并在需要时更新它，因此我们可以轻松地处理数据的更新和缓存失效。</p>
 <p>总之，<code>swr</code> 提供了一种简单而强大的方式来处理数据请求和管理缓存。它可以帮助您更轻松地处理数据请求和更新，并提高您的应用程序的性能和可靠性。</p>
@@ -324,31 +315,28 @@ function App() {
 <p>以下是在 React 应用程序中使用 <code>@babel/plugin-transform-react-i18next</code> 的示例代码：</p>
 <p>首先，您需要安装该插件：</p>
 <pre tabindex="0"><code>npm install --save-dev @babel/plugin-transform-react-i18next
-
 </code></pre><p>然后，在您的 <code>.babelrc</code> 配置文件中添加该插件：</p>
 <pre tabindex="0"><code>{
-  &quot;plugins&quot;: [
-    &quot;@babel/plugin-transform-react-i18next&quot;
+  &#34;plugins&#34;: [
+    &#34;@babel/plugin-transform-react-i18next&#34;
   ]
 }
-
 </code></pre><p>现在，您可以在 React 组件中使用 i18n 功能。例如，以下代码显示了如何使用 <code>useTranslation</code> 钩子来实现多语言支持：</p>
-<pre tabindex="0"><code>import React from 'react';
-import { useTranslation } from 'react-i18next';
+<pre tabindex="0"><code>import React from &#39;react&#39;;
+import { useTranslation } from &#39;react-i18next&#39;;
 
 function MyComponent() {
   const { t } = useTranslation();
 
   return (
     &lt;div&gt;
-      &lt;h1&gt;{t('title')}&lt;/h1&gt;
-      &lt;p&gt;{t('description')}&lt;/p&gt;
+      &lt;h1&gt;{t(&#39;title&#39;)}&lt;/h1&gt;
+      &lt;p&gt;{t(&#39;description&#39;)}&lt;/p&gt;
     &lt;/div&gt;
   );
 }
 
 export default MyComponent;
-
 </code></pre><p>在这个例子中，我们使用 <code>useTranslation</code> 钩子来获取 <code>t</code> 函数，该函数可以将键转换为本地化字符串。在组件中，我们使用 <code>t</code> 函数来显示多语言标题和描述。</p>
 <p>总的来说，使用 Babel 插件可以使 i18n 支持变得更加简单和直观。通过将 i18n 集成到 React 组件中，您可以轻松地实现多语言支持，并提高您的应用程序的可用性和易用性。</p>
 <p>发布订阅模式是一种常见的设计模式，用于在不同的组件之间传递信息和事件。在这个模式中，一个组件充当发布者，将事件发布到一个或多个订阅者。订阅者可以根据需要处理这些事件，并在必要时响应它们。</p>
@@ -385,7 +373,7 @@ export default MyComponent;
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>

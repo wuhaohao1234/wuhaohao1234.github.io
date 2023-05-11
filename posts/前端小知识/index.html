@@ -11,7 +11,6 @@
 <meta property="og:url" content="http://wuhaohao1234.github.io/posts/%E5%89%8D%E7%AB%AF%E5%B0%8F%E7%9F%A5%E8%AF%86/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-05-06T00:04:38+08:00" />
 <meta property="article:modified_time" content="2023-05-06T00:04:38+08:00" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="前端小知识"/>
 <meta name="twitter:description" content="前端小知识 RabbitMQ 前端监控 RabbitMQ是一种消息队列系统，通常用于在分布式系统中进行异步通信。在RabbitMQ中，前端监控通常涉及以下方面："/>
@@ -106,69 +105,66 @@
 <h3 id="p-limt">p-limt</h3>
 <p>p-limit是一个JavaScript模块，它提供了一种限制并发异步操作的方法。它允许您指定要同时执行的最大操作数，并自动管理异步任务的排队和执行。</p>
 <p>p-limit使用Promise对象来管理异步任务的状态，它可以用于各种情况，例如限制HTTP请求的并发数、限制数据库查询的并发数、限制文件系统操作的并发数等等。p-limit还可以用于限制并发的JavaScript函数调用。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">pLimit</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;p-limit&#39;</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">limit</span> <span class="o">=</span> <span class="nx">pLimit</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-
-<span class="kr">async</span> <span class="kd">function</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// HTTP请求的异步操作
-</span><span class="c1"></span>    <span class="c1">// ...
-</span><span class="c1"></span>  <span class="p">});</span>
-<span class="p">}</span>
-
-<span class="kr">const</span> <span class="nx">urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;http://example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;http://example.net&#39;</span><span class="p">];</span>
-
-<span class="kr">async</span> <span class="kd">function</span> <span class="nx">fetchData</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">results</span> <span class="o">=</span> <span class="p">[];</span>
-
-  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">url</span> <span class="k">of</span> <span class="nx">urls</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">limit</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">));</span>
-    <span class="nx">results</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
-  <span class="p">}</span>
-
-  <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">results</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">fetchData</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-<span class="p">});</span>
-
-</code></pre></div><h3 id="promiseall">promise.all</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">pLimit</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;p-limit&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">limit</span> <span class="o">=</span> <span class="nx">pLimit</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// HTTP请求的异步操作
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">urls</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;http://example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;http://example.org&#39;</span><span class="p">,</span> <span class="s1">&#39;http://example.net&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">fetchData</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">results</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">url</span> <span class="k">of</span> <span class="nx">urls</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">limit</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">results</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">results</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">fetchData</span><span class="p">().</span><span class="nx">then</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><h3 id="promiseall">promise.all</h3>
 <p>在使用Promise.all时，如果其中任何一个Promise对象被rejected（失败）了，Promise.all返回的Promise对象也会立即被rejected。这种情况下，您可以使用.catch()或者async/await语法来处理Promise.all的失败情况。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">promises</span> <span class="o">=</span> <span class="p">[</span>
-  <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">),</span>
-  <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Promise 2 Failed&#39;</span><span class="p">)),</span>
-  <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">),</span>
-<span class="p">];</span>
-
-<span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">promises</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">results</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">results</span><span class="p">);</span>
-  <span class="p">})</span>
-  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Promise.all failed:&#39;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
-  <span class="p">});</span>
-
-</code></pre></div><p>在这个例子中，我们创建了一个包含3个Promise对象的数组。第二个Promise对象是被拒绝的，模拟一个失败的Promise。当我们使用Promise.all来等待所有Promise对象都完成后，由于第二个Promise对象被拒绝，Promise.all也会被拒绝。我们使用.catch()方法来捕获Promise.all的拒绝原因，并进行错误处理。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">promises</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Promise 2 Failed&#39;</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">promises</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">results</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">results</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Promise.all failed:&#39;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span></code></pre></div><p>在这个例子中，我们创建了一个包含3个Promise对象的数组。第二个Promise对象是被拒绝的，模拟一个失败的Promise。当我们使用Promise.all来等待所有Promise对象都完成后，由于第二个Promise对象被拒绝，Promise.all也会被拒绝。我们使用.catch()方法来捕获Promise.all的拒绝原因，并进行错误处理。</p>
 <p>在实际使用Promise.all时，您还可以使用async/await语法来处理Promise.all的失败情况，例如：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">myAsyncFunction</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">promises</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">),</span>
-    <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Promise 2 Failed&#39;</span><span class="p">)),</span>
-    <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">),</span>
-  <span class="p">];</span>
-
-  <span class="k">try</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">results</span> <span class="o">=</span> <span class="kr">await</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">promises</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">results</span><span class="p">);</span>
-  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Promise.all failed:&#39;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="nx">myAsyncFunction</span><span class="p">();</span>
-
-</code></pre></div><h3 id="js-的-9-种作用域">JS 的 9 种作用域</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">async</span> <span class="kd">function</span> <span class="nx">myAsyncFunction</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">promises</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;Promise 2 Failed&#39;</span><span class="p">)),</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;3&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">results</span> <span class="o">=</span> <span class="kr">await</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">promises</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">results</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Promise.all failed:&#39;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">myAsyncFunction</span><span class="p">();</span>
+</span></span></code></pre></div><h3 id="js-的-9-种作用域">JS 的 9 种作用域</h3>
 <p>JavaScript中的作用域决定了变量和函数在程序中的可见性和可访问性。以下是JavaScript中的九种作用域：</p>
 <p>全局作用域（Global scope）：全局作用域是程序中默认的作用域，它存在于所有函数外部，任何在全局作用域中声明的变量和函数都可以在程序的任何位置访问。</p>
 <p>函数作用域（Function scope）：函数作用域是在函数内部声明的变量和函数的作用域，这些变量和函数只能在函数内部访问。当函数执行完成后，其作用域也会随之销毁。</p>
@@ -207,7 +203,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
