@@ -6,7 +6,25 @@
     <description>Recent content in Posts on 阿布的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 08 May 2023 21:11:30 +0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 May 2023 23:40:22 +0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>交易员</title>
+      <link>http://wuhaohao1234.github.io/posts/%E4%BA%A4%E6%98%93%E5%91%98/</link>
+      <pubDate>Thu, 11 May 2023 23:40:22 +0800</pubDate>
+      
+      <guid>http://wuhaohao1234.github.io/posts/%E4%BA%A4%E6%98%93%E5%91%98/</guid>
+      <description>交易员 金融市场知识：了解股票、债券、外汇、商品等金融产品的特点、交易方式、价格形成机制等。 经济学知识：理解宏观经济、微观经济以及经济指标对金</description>
+    </item>
+    
+    <item>
+      <title>Tensorflow</title>
+      <link>http://wuhaohao1234.github.io/posts/tensorflow/</link>
+      <pubDate>Tue, 09 May 2023 23:39:15 +0800</pubDate>
+      
+      <guid>http://wuhaohao1234.github.io/posts/tensorflow/</guid>
+      <description>tensorflow 安装TensorFlow：你可以在TensorFlow官方网站上找到安装指南，并按照指南完成安装。 学习TensorFlow基础知识：阅读T</description>
+    </item>
+    
     <item>
       <title>Threejs</title>
       <link>http://wuhaohao1234.github.io/posts/threejs/</link>
