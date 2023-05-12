@@ -6,7 +6,16 @@
     <description>Recent content on 阿布的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 11 May 2023 23:40:22 +0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 May 2023 02:26:18 +0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Whisper提取视频中的字幕</title>
+      <link>http://wuhaohao1234.github.io/posts/whisper%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9A%84%E5%AD%97%E5%B9%95/</link>
+      <pubDate>Sat, 13 May 2023 02:26:18 +0800</pubDate>
+      
+      <guid>http://wuhaohao1234.github.io/posts/whisper%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9A%84%E5%AD%97%E5%B9%95/</guid>
+      <description>Whisper提取视频中的字幕 参考 教程 whisper.cpp clone whisper.cpp clone repo https://github.com/ggerganov/whisper.cpp 下载large到models目录 bash ./models/download-ggml-model.sh large 或者到这个网站 https://huggingface.co/ggerganov/whisper.cpp/tree/main 允许make命令生成./main make 视</description>
+    </item>
+    
     <item>
       <title>交易员</title>
       <link>http://wuhaohao1234.github.io/posts/%E4%BA%A4%E6%98%93%E5%91%98/</link>
