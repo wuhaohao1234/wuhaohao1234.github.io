@@ -3,9 +3,16 @@
         <title>阿布的博客</title>
         <link>http://wuhaohao1234.github.io/</link>
         <description>阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 15 May 2023 03:53:40 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 15 May 2023 04:47:37 &#43;0800</lastBuildDate>
             <atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>术数</title>
+    <link>http://wuhaohao1234.github.io/posts/%E6%9C%AF%E6%95%B0/</link>
+    <pubDate>Mon, 15 May 2023 04:47:37 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/%E6%9C%AF%E6%95%B0/</guid>
+    <description><![CDATA[术数 周易的发明者：周文王 起初，占卜是用龟壳 在上古时期，大家都得从事生产活动，我一天都未必能打到一只乌龟，占卜一次就得烧一个龟壳，不划算啊，这]]></description>
+</item><item>
     <title>聊一聊占卜</title>
     <link>http://wuhaohao1234.github.io/posts/%E8%81%8A%E4%B8%80%E8%81%8A%E5%8D%A0%E5%8D%9C/</link>
     <pubDate>Mon, 15 May 2023 03:53:40 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E6%A2%85%E8%8A%B1%E6%98%93%E6%95%B0/</guid>
     <description><![CDATA[梅花易数 参考书籍：易经，梅花易数 象数易理篇之一 乾: 天 兑: 沼泽 离: 火 震: 雷 乾: 风 坎: 水 艮: 山 坤: 地 五行生克 金生水，水生木，木生火，火生土，土生]]></description>
-</item><item>
-    <title>React渲染</title>
-    <link>http://wuhaohao1234.github.io/posts/react%E6%B8%B2%E6%9F%93/</link>
-    <pubDate>Sun, 02 Apr 2023 19:29:36 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/react%E6%B8%B2%E6%9F%93/</guid>
-    <description><![CDATA[React渲染 react 渲染流程分为 render 和 commit 阶段。 render 阶段执行 vdom 转 fiber 的 reconcile，commit 阶段更新 dom，执行 effect 等副作用逻辑。 commit 阶段分为 before m]]></description>
 </item></channel>
 </rss>
