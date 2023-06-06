@@ -6,7 +6,16 @@
     <description>Recent content on 阿布的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 21 May 2023 02:26:08 +0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jun 2023 10:00:43 +0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>阿里面试</title>
+      <link>http://wuhaohao1234.github.io/posts/%E9%98%BF%E9%87%8C%E9%9D%A2%E8%AF%95/</link>
+      <pubDate>Tue, 06 Jun 2023 10:00:43 +0800</pubDate>
+      
+      <guid>http://wuhaohao1234.github.io/posts/%E9%98%BF%E9%87%8C%E9%9D%A2%E8%AF%95/</guid>
+      <description>阿里面试 提供了一个数组结构的 data，要求实现一个 query 方法，返回一个新的数组，query 方法内部有 过滤、排序、分组 等操作，并且支持链式调用，调</description>
+    </item>
+    
     <item>
       <title>如何改变命运和运气</title>
       <link>http://wuhaohao1234.github.io/posts/%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98%E5%91%BD%E8%BF%90%E5%92%8C%E8%BF%90%E6%B0%94/</link>
