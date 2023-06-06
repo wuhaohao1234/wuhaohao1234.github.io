@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>阿里面试 - 阿布的博客</title><meta name="Description" content=""><meta property="og:title" content="阿里面试" />
+<meta property="og:description" content="阿里面试 提供了一个数组结构的 data，要求实现一个 query 方法，返回一个新的数组，query 方法内部有 过滤、排序、分组 等操作，并且支持链式调用，调" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://wuhaohao1234.github.io/posts/%E9%98%BF%E9%87%8C%E9%9D%A2%E8%AF%95/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-06T10:00:43+08:00" />
+<meta property="article:modified_time" content="2023-06-06T10:00:43+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="阿里面试"/>
+<meta name="twitter:description" content="阿里面试 提供了一个数组结构的 data，要求实现一个 query 方法，返回一个新的数组，query 方法内部有 过滤、排序、分组 等操作，并且支持链式调用，调"/>
+<meta name="application-name" content="阿布的博客">
+<meta name="apple-mobile-web-app-title" content="阿布的博客"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://wuhaohao1234.github.io/posts/%E9%98%BF%E9%87%8C%E9%9D%A2%E8%AF%95/" /><link rel="prev" href="http://wuhaohao1234.github.io/posts/%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98%E5%91%BD%E8%BF%90%E5%92%8C%E8%BF%90%E6%B0%94/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "阿里面试",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/wuhaohao1234.github.io\/posts\/%E9%98%BF%E9%87%8C%E9%9D%A2%E8%AF%95\/"
+        },"genre": "posts","wordcount":  3041 ,
+        "url": "http:\/\/wuhaohao1234.github.io\/posts\/%E9%98%BF%E9%87%8C%E9%9D%A2%E8%AF%95\/","datePublished": "2023-06-06T10:00:43+08:00","dateModified": "2023-06-06T10:00:43+08:00","publisher": {
+            "@type": "Organization",
+            "name": "作者"},"author": {
+                "@type": "Person",
+                "name": "作者"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="阿布的博客">阿布的博客</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://www.yuque.com/abu0418" rel="noopener noreffer" target="_blank"> 语雀 </a><a class="menu-item" href="https://github.com/wuhaohao1234" rel="noopener noreffer" target="_blank"> github </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="阿布的博客">阿布的博客</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://www.yuque.com/abu0418" title="" rel="noopener noreffer" target="_blank">语雀</a><a class="menu-item" href="https://github.com/wuhaohao1234" title="" rel="noopener noreffer" target="_blank">github</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">阿里面试</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>作者</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-06-06">2023-06-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3041 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 7 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#阿里面试">阿里面试</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="阿里面试">阿里面试</h2>
+<p>提供了一个数组结构的 data，要求实现一个 query 方法，返回一个新的数组，query 方法内部有 过滤、排序、分组 等操作，并且支持链式调用，调用最终的 execute 方法返回结果：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Query</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">constructor</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">filters</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">sortByField</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">groupByField</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">where</span><span class="p">(</span><span class="nx">filterFn</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">filters</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">filterFn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">sortBy</span><span class="p">(</span><span class="nx">field</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">sortByField</span> <span class="o">=</span> <span class="nx">field</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">groupBy</span><span class="p">(</span><span class="nx">field</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">groupByField</span> <span class="o">=</span> <span class="nx">field</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">this</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">execute</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[...</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Apply filters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">filterFn</span> <span class="k">of</span> <span class="k">this</span><span class="p">.</span><span class="nx">filters</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">result</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">filterFn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Sort by field
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">sortByField</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">result</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">a</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">sortByField</span><span class="p">]</span> <span class="o">-</span> <span class="nx">b</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">sortByField</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Group by field
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">groupByField</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">groups</span> <span class="o">=</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl">      <span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">item</span> <span class="k">of</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="nx">item</span><span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">groupByField</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">groups</span><span class="p">[</span><span class="nx">key</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">groups</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">groups</span><span class="p">[</span><span class="nx">key</span><span class="p">].</span><span class="nx">push</span><span class="p">(</span><span class="nx">item</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">result</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">groups</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 使用示例
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">list</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">20</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">25</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">30</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">22</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">28</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Query</span><span class="p">(</span><span class="nx">list</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">where</span><span class="p">(</span><span class="nx">item</span> <span class="p">=&gt;</span> <span class="nx">item</span><span class="p">.</span><span class="nx">age</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">sortBy</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">groupBy</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">execute</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</span></span></code></pre></div><p>react 实现一个倒计时抢券组件，页面加载时从 10s 开始倒计时，倒计时结束之后点击按钮请求接口进行抢券，同时更新文案等等功能。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">CouponComponent</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">countdown</span><span class="p">,</span> <span class="nx">setCountdown</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">canClaim</span><span class="p">,</span> <span class="nx">setCanClaim</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">claimText</span><span class="p">,</span> <span class="nx">setClaimText</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="s1">&#39;倒计时结束，点击抢券&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span><span class="nx">isClaiming</span><span class="p">,</span> <span class="nx">setIsClaiming</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">countdown</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">timer</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">setCountdown</span><span class="p">(</span><span class="nx">prevCountdown</span> <span class="p">=&gt;</span> <span class="nx">prevCountdown</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">clearInterval</span><span class="p">(</span><span class="nx">timer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setCanClaim</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setClaimText</span><span class="p">(</span><span class="s1">&#39;倒计时结束，点击抢券&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span> <span class="p">[</span><span class="nx">countdown</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">handleClaim</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">canClaim</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">isClaiming</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setIsClaiming</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setClaimText</span><span class="p">(</span><span class="s1">&#39;正在抢券...&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 发送抢券请求
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="c1">// 假设请求成功，设置成功文案并执行其他逻辑
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">setClaimText</span><span class="p">(</span><span class="s1">&#39;抢券成功&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 执行其他逻辑...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">},</span> <span class="mi">2000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="nx">倒计时</span><span class="o">:</span> <span class="p">{</span><span class="nx">countdown</span><span class="p">}</span><span class="nx">s</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">handleClaim</span><span class="p">}</span> <span class="na">disabled</span><span class="o">=</span><span class="p">{</span><span class="o">!</span><span class="nx">canClaim</span><span class="p">}&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="nx">claimText</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">CouponComponent</span><span class="p">;</span>
+</span></span></code></pre></div><p>React 代码层的优化</p>
+<p>class 组件和 function 组件两种情况，核心是通过减少渲染次数达到优化目的，具体的优化手段有 PureComponent、shouldComponentUpdate、React.memo、React.useMemo、React.useCallback、React.useRef 等等。</p>
+<p>useMemo 和 useCallback 有什么区别</p>
+<p><code>useMemo</code>和<code>useCallback</code>都是React中的Hook，用于优化函数组件的性能。它们的主要区别在于它们的用途和返回值类型。</p>
+<ol>
+<li>
+<p><code>useMemo</code>：</p>
+<ul>
+<li><code>useMemo</code>用于在依赖项发生变化时进行性能优化，以避免不必要的计算开销。</li>
+<li><code>useMemo</code>接受一个函数和依赖项数组作为参数，并返回计算结果的记忆化版本。</li>
+<li><code>useMemo</code>会在组件渲染过程中执行传递的函数，并将结果缓存起来。只有当依赖项发生变化时，才会重新执行函数并更新缓存的结果。</li>
+<li>当需要根据某些依赖项计算一个值，并且这个计算是昂贵的时候，可以使用<code>useMemo</code>来避免在每次渲染时重复计算。</li>
+</ul>
+</li>
+<li>
+<p><code>useCallback</code>：</p>
+<ul>
+<li><code>useCallback</code>用于在依赖项发生变化时进行性能优化，以避免不必要的函数创建。</li>
+<li><code>useCallback</code>接受一个函数和依赖项数组作为参数，并返回一个记忆化版本的回调函数。</li>
+<li><code>useCallback</code>会在组件渲染过程中创建并返回一个回调函数。只有当依赖项发生变化时，才会重新创建回调函数。</li>
+<li>当需要将一个回调函数传递给子组件，但该回调函数依赖于某些值时，可以使用<code>useCallback</code>来确保子组件在依赖项不变的情况下不会重新渲染。</li>
+</ul>
+</li>
+</ol>
+<p>需要注意的是，尽管<code>useMemo</code>和<code>useCallback</code>可以用于性能优化，但在大多数情况下，它们并不是必需的。只有在遇到性能问题并确定存在性能瓶颈时，才应该考虑使用这些优化手段。在大多数情况下，React的自身优化机制已经足够处理性能问题。</p>
+<p>useEffect 和 useLayoutEffect 有什么区别</p>
+<p><code>useEffect</code>和<code>useLayoutEffect</code>是React中的Hook，用于处理副作用操作。它们的主要区别在于它们执行的时机。</p>
+<ol>
+<li>
+<p><code>useEffect</code>：</p>
+<ul>
+<li><code>useEffect</code>在组件渲染之后异步执行副作用操作。</li>
+<li><code>useEffect</code>的副作用操作不会阻塞组件的渲染和布局过程。</li>
+<li><code>useEffect</code>中的副作用操作可能在浏览器绘制之后才会执行，因此对于布局和视觉上的变化，可能会有延迟。</li>
+</ul>
+</li>
+<li>
+<p><code>useLayoutEffect</code>：</p>
+<ul>
+<li><code>useLayoutEffect</code>在组件渲染之后同步执行副作用操作。</li>
+<li><code>useLayoutEffect</code>的副作用操作会在组件渲染和布局之间同步执行。</li>
+<li><code>useLayoutEffect</code>中的副作用操作会在浏览器执行绘制之前完成，以确保在组件布局和视觉上的变化之前执行。</li>
+</ul>
+</li>
+</ol>
+<p>在大多数情况下，应优先考虑使用<code>useEffect</code>，因为它不会阻塞渲染过程，并且在大多数情况下可以满足副作用操作的需求。只有在需要在布局和视觉上变化之前立即执行副作用操作时，才需要使用<code>useLayoutEffect</code>。</p>
+<p>需要注意的是，在使用<code>useLayoutEffect</code>时，由于它在渲染和布局之间同步执行，可能会导致性能问题，因此需要谨慎使用，确保副作用操作的性能开销较小。在大多数情况下，使用<code>useEffect</code>即可满足需求，并且能够更好地优化性能。</p>
+<p>useEffect 对应在 class 中都生命周期怎么写</p>
+<p>在类组件中，<code>useEffect</code>的功能可以通过生命周期方法来实现。下面是<code>useEffect</code>对应的一些常见生命周期方法以及它们的作用：</p>
+<ol>
+<li>
+<p><code>componentDidMount</code>：</p>
+<ul>
+<li><code>componentDidMount</code>在组件挂载后立即调用，可以用于执行副作用操作，例如订阅事件、请求数据等。</li>
+<li>在<code>componentDidMount</code>中执行的操作相当于在<code>useEffect</code>的依赖项为空数组时执行。</li>
+</ul>
+</li>
+<li>
+<p><code>componentDidUpdate</code>：</p>
+<ul>
+<li><code>componentDidUpdate</code>在组件更新后调用，在首次渲染后以及每次更新时都会调用。</li>
+<li>可以使用<code>componentDidUpdate</code>来执行副作用操作，但需要在操作之前进行条件检查，以避免无限循环。</li>
+</ul>
+</li>
+<li>
+<p><code>componentWillUnmount</code>：</p>
+<ul>
+<li><code>componentWillUnmount</code>在组件卸载之前调用，可以用于清理副作用操作，例如取消订阅、清除定时器等。</li>
+<li>在<code>componentWillUnmount</code>中执行的操作相当于在<code>useEffect</code>的清除函数中执行。</li>
+</ul>
+</li>
+</ol>
+<p>下面是一个示例，演示了如何使用类组件的生命周期方法来替代<code>useEffect</code>的功能：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">MyComponent</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// componentDidMount 对应 useEffect(() =&gt; { ... }, [])
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Component did mount&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// 执行副作用操作，例如订阅事件、请求数据等
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">componentDidUpdate</span><span class="p">(</span><span class="nx">prevProps</span><span class="p">,</span> <span class="nx">prevState</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// componentDidUpdate 对应 useEffect(() =&gt; { ... }, [依赖项])
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Component did update&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 执行副作用操作，例如根据依赖项的变化请求数据等
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">componentWillUnmount</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// componentWillUnmount 对应 useEffect 的清除函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Component will unmount&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 清理副作用操作，例如取消订阅、清除定时器等
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="nx">My</span> <span class="nx">Component</span><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>在上面的示例中，<code>componentDidMount</code>方法相当于在组件挂载后执行的副作用操作，<code>componentDidUpdate</code>方法相当于在依赖项更新后执行的副作用操作，<code>componentWillUnmount</code>方法相当于清理函数。</p>
+<p>需要注意的是，在函数组件中使用<code>useEffect</code>时，每次渲染都会创建新的副作用操作和清理函数，而在类组件中，生命周期方法只会在特定的时机调用一次。</p>
+<p>如果在 if 里面写 useEffect 会有什么表现</p>
+<p>在条件语句里面写 useEffect 控制台会出现报错，因为 hook 的规则就是不能在条件语句或者循环语句里面写，这点在 react 官方文档里面也有提到。</p>
+<p>React 的 Fiber 架构是什么</p>
+<p>作为架构来说，在旧的架构中，Reconciler（协调器）采用递归的方式执行，无法中断，节点数据保存在递归的调用栈中，被称为 Stack Reconciler，stack 就是调用栈；在新的架构中，Reconciler（协调器）是基于 fiber 实现的，节点数据保存在 fiber 中，所以被称为 fiber Reconciler。</p>
+<p>作为静态数据结构来说，每个 fiber 对应一个组件，保存了这个组件的类型对应的 dom 节点信息，这个时候，fiber 节点就是我们所说的虚拟 DOM。</p>
+<p>作为动态工作单元来说，fiber 节点保存了该节点需要更新的状态，以及需要执行的副作用。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-06-06</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98%E5%91%BD%E8%BF%90%E5%92%8C%E8%BF%90%E6%B0%94/" class="prev" rel="prev" title="如何改变命运和运气"><i class="fas fa-angle-left fa-fw"></i>如何改变命运和运气</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
