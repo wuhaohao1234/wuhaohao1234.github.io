@@ -3,9 +3,16 @@
         <title>阿布的博客</title>
         <link>http://wuhaohao1234.github.io/</link>
         <description>阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 12 Jun 2023 15:56:57 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 18 Jun 2023 10:01:10 &#43;0800</lastBuildDate>
             <atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>中国经济版图</title>
+    <link>http://wuhaohao1234.github.io/posts/%E4%B8%AD%E5%9B%BD%E7%BB%8F%E6%B5%8E%E7%89%88%E5%9B%BE/</link>
+    <pubDate>Sun, 18 Jun 2023 10:01:10 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/%E4%B8%AD%E5%9B%BD%E7%BB%8F%E6%B5%8E%E7%89%88%E5%9B%BE/</guid>
+    <description><![CDATA[中国经济版图 基础设施板块 源头性产业 电力，水力，金属，化工，交通，建筑，环保，回收，农业种植 到2035年终极趋势：国有化，垄断化，集约化 借助国]]></description>
+</item><item>
     <title>太上感应篇</title>
     <link>http://wuhaohao1234.github.io/posts/%E5%A4%AA%E4%B8%8A%E6%84%9F%E5%BA%94%E7%AF%87/</link>
     <pubDate>Mon, 12 Jun 2023 15:56:57 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/threejs/</guid>
     <description><![CDATA[threejs 学习 Three.js 的基础知识 在开始创建 3D 场景之前，您需要了解 Three.js 的基本组件、场景、相机、渲染器、几何体和材质等等。 场景(Scene) 场景是 Three.js 中所有 3D 对象]]></description>
-</item><item>
-    <title>前端小知识</title>
-    <link>http://wuhaohao1234.github.io/posts/%E5%89%8D%E7%AB%AF%E5%B0%8F%E7%9F%A5%E8%AF%86/</link>
-    <pubDate>Sat, 06 May 2023 00:04:38 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/%E5%89%8D%E7%AB%AF%E5%B0%8F%E7%9F%A5%E8%AF%86/</guid>
-    <description><![CDATA[前端小知识 RabbitMQ 前端监控 RabbitMQ是一种消息队列系统，通常用于在分布式系统中进行异步通信。在RabbitMQ中，前端监控通常涉及以下方面：]]></description>
 </item></channel>
 </rss>
