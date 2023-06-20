@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 阿布的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 18 Jun 2023 10:01:10 +0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jun 2023 09:54:17 +0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>前端面试 2</title>
+      <link>http://wuhaohao1234.github.io/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-2/</link>
+      <pubDate>Tue, 20 Jun 2023 09:54:17 +0800</pubDate>
+      
+      <guid>http://wuhaohao1234.github.io/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-2/</guid>
+      <description>前端面试-2 在声明变量中，变量提升说的是什么？let和const的区别？ 在JavaScript中，变量提升（hoisting）是指在代码执行</description>
+    </item>
+    
     <item>
       <title>中国经济版图</title>
       <link>http://wuhaohao1234.github.io/posts/%E4%B8%AD%E5%9B%BD%E7%BB%8F%E6%B5%8E%E7%89%88%E5%9B%BE/</link>
