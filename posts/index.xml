@@ -3,7 +3,14 @@
         <title>所有文章 - 阿布的博客</title>
         <link>http://wuhaohao1234.github.io/posts/</link>
         <description>所有文章 | 阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 20 Jun 2023 09:54:17 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 16 Jul 2023 05:40:20 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>转型 产业升级 就业率</title>
+    <link>http://wuhaohao1234.github.io/posts/%E8%BD%AC%E5%9E%8B-%E4%BA%A7%E4%B8%9A%E5%8D%87%E7%BA%A7-%E5%B0%B1%E4%B8%9A%E7%8E%87/</link>
+    <pubDate>Sun, 16 Jul 2023 05:40:20 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/%E8%BD%AC%E5%9E%8B-%E4%BA%A7%E4%B8%9A%E5%8D%87%E7%BA%A7-%E5%B0%B1%E4%B8%9A%E7%8E%87/</guid>
+    <description><![CDATA[转型 产业升级 就业率 先谈谈几个时间节点 1997年至2003年： 东北下岗潮 中国之前一直是重工业，主要分布在东北为主 在当时，工人的待遇其实是特别高]]></description>
+</item><item>
     <title>前端面试 2</title>
     <link>http://wuhaohao1234.github.io/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-2/</link>
     <pubDate>Tue, 20 Jun 2023 09:54:17 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E4%BA%A4%E6%98%93%E5%91%98/</guid>
     <description><![CDATA[交易员 金融市场知识：了解股票、债券、外汇、商品等金融产品的特点、交易方式、价格形成机制等。 经济学知识：理解宏观经济、微观经济以及经济指标对金]]></description>
-</item><item>
-    <title>Tensorflow</title>
-    <link>http://wuhaohao1234.github.io/posts/tensorflow/</link>
-    <pubDate>Tue, 09 May 2023 23:39:15 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/tensorflow/</guid>
-    <description><![CDATA[tensorflow 安装TensorFlow：你可以在TensorFlow官方网站上找到安装指南，并按照指南完成安装。 学习TensorFlow基础知识：阅读T]]></description>
 </item></channel>
 </rss>
