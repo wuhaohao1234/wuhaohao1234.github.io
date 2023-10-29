@@ -3,9 +3,16 @@
         <title>阿布的博客</title>
         <link>http://wuhaohao1234.github.io/</link>
         <description>阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 31 Jul 2023 07:32:07 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 29 Oct 2023 15:33:27 &#43;0800</lastBuildDate>
             <atom:link href="http://wuhaohao1234.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>深度学习</title>
+    <link>http://wuhaohao1234.github.io/posts/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
+    <pubDate>Sun, 29 Oct 2023 15:33:27 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</guid>
+    <description><![CDATA[深度学习 推荐书籍： python深度学习：基于tensorflow 作者: 吴茂贵 https://weread.qq.com/web/bookDetail/07f320c07163ff6c07f8f02 python深度学习 2 作者: 弗朗索瓦·肖莱 https://weread.qq.com/web/bookDetail/33f32c90813ab71c6g018fff 在机器学习中，分类]]></description>
+</item><item>
     <title>从另外一个视角解读国共</title>
     <link>http://wuhaohao1234.github.io/posts/%E4%BB%8E%E5%8F%A6%E5%A4%96%E4%B8%80%E4%B8%AA%E8%A7%86%E8%A7%92%E8%A7%A3%E8%AF%BB%E5%9B%BD%E5%85%B1/</link>
     <pubDate>Mon, 31 Jul 2023 07:32:07 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E8%81%8A%E4%B8%80%E8%81%8A%E5%8D%A0%E5%8D%9C/</guid>
     <description><![CDATA[聊一聊占卜 用动态的眼光看待玄学 以下内容，全属娱乐 玄学的起源 它的起源有两条路，第一条，和全世界其他所有的文明都一样。我们都是上古时期原始部落的]]></description>
-</item><item>
-    <title>Whisper提取视频中的字幕</title>
-    <link>http://wuhaohao1234.github.io/posts/whisper%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9A%84%E5%AD%97%E5%B9%95/</link>
-    <pubDate>Sat, 13 May 2023 02:26:18 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/whisper%E6%8F%90%E5%8F%96%E8%A7%86%E9%A2%91%E4%B8%AD%E7%9A%84%E5%AD%97%E5%B9%95/</guid>
-    <description><![CDATA[Whisper提取视频中的字幕 参考 教程 whisper.cpp clone whisper.cpp clone repo https://github.com/ggerganov/whisper.cpp 下载large到models目录 bash ./models/download-ggml-model.sh large 或者到这个网站 https://huggingface.co/ggerganov/whisper.cpp/tree/main 允许make命令生成./main make 视]]></description>
 </item></channel>
 </rss>
