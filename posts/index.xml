@@ -3,7 +3,14 @@
         <title>所有文章 - 阿布的博客</title>
         <link>http://wuhaohao1234.github.io/posts/</link>
         <description>所有文章 | 阿布的博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 01 Feb 2024 20:38:51 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 19 Apr 2024 14:14:11 &#43;0800</lastBuildDate><atom:link href="http://wuhaohao1234.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>手写数字识别cnn</title>
+    <link>http://wuhaohao1234.github.io/posts/%E6%89%8B%E5%86%99%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%ABcnn/</link>
+    <pubDate>Fri, 19 Apr 2024 14:14:11 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://wuhaohao1234.github.io/posts/%E6%89%8B%E5%86%99%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%ABcnn/</guid>
+    <description><![CDATA[手写数字识别cnn 卷积神经网络（CNN）是一种在计算机视觉领域广泛应用的深度学习模型，它在手写数字识别等任务中取得了很高的性能。下面我将详细]]></description>
+</item><item>
     <title>紫微斗数</title>
     <link>http://wuhaohao1234.github.io/posts/%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B0/</link>
     <pubDate>Thu, 01 Feb 2024 20:38:51 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>http://wuhaohao1234.github.io/posts/%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98%E5%91%BD%E8%BF%90%E5%92%8C%E8%BF%90%E6%B0%94/</guid>
     <description><![CDATA[如何改变命运和运气 提纲 一、原理篇 1-1、人为什么活着 1、唿吸与能量 2、感觉与信息 3、唯物与唯心 4、共振与叠加 1-2、人与环境的关系 1、五行的]]></description>
-</item><item>
-    <title>术数</title>
-    <link>http://wuhaohao1234.github.io/posts/%E6%9C%AF%E6%95%B0/</link>
-    <pubDate>Mon, 15 May 2023 04:47:37 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://wuhaohao1234.github.io/posts/%E6%9C%AF%E6%95%B0/</guid>
-    <description><![CDATA[术数 周易的发明者：周文王 起初，占卜是用龟壳 在上古时期，大家都得从事生产活动，我一天都未必能打到一只乌龟，占卜一次就得烧一个龟壳，不划算啊，这]]></description>
 </item></channel>
 </rss>
